@@ -3,7 +3,7 @@
 *{
     border: #371B34 solid 1px;
 } */
-a{
+*{
     font-family: 'Inter', sans-serif;
-    color:#371B34;
+    color: #371B34;
 }
