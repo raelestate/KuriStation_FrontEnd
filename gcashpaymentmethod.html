@@ -8,7 +8,7 @@
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./source/styles.css" rel="stylesheet">
 
-    <title>Login</title>
+    <title>Register | Account</title>
 </head>
 
 <body>
@@ -16,20 +16,11 @@
     <div class="container align-content-center">
         <div class="text-center position-absolute top-50 start-50 translate-middle pb-5 pt-5">
             <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0" alt="KuriStation Logo">
-            <p class="fw-bolder m-0 p-3">Login to your account</p>
-            <form class="m-0">
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                  </div>
-                  <div class="input-group flex-nowrap pb-3">
-                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-eye"></i></span>
-                  </div>
-                  <div class="input-group">
-                    <button class="btn btn-success" type="button">Login</button>
-                  </div>
-                  
+            <p class="fw-bolder m-0 p-3">Select Payment Method</p>
+            <form class="pb-3">
+                <a href="#" type="button">
+                    <img src="./source/images/gcash.png">
+                </a>
             </form>
 
         </div>
@@ -41,10 +32,17 @@
             border: 1px #371B34 solid;
             width: 250px;
         }
-        a{
+        a img{
+            border: blue 3px solid;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        a {
             color: #371B34;
         }
-        button{
+
+        button {
             width: 250px;
         }
     </style>
