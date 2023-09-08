@@ -10,3 +10,19 @@
 a{
     color: #371B34;
 }
+input{
+    border: none;
+}
+i.bi{
+    font-size: 25px;
+}
+.circular-image {
+    border: 2px solid #F09E5478;
+    /* Change the border color as needed */
+    border-radius: 50%;
+    /* Make the image circular */
+    width: 35px;
+    /* Set the desired width */
+    height: 35px;
+    /* Set the desired height */
+}

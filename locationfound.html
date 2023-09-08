@@ -9,53 +9,94 @@
     <link href="./source/styles.css" rel="stylesheet">
     <title>Document</title>
 </head>
+<div class="container pt-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary pb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+                    class="img-fluid circular-image"></a>
+            <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
+            <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
+            <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
+            <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
+        </div>
+    </nav>
+</div>
+<div class="container text-center">
+    <div class="container text-start">
+        <div class="row align-items-center p-3">
+            <div class="col">
+                <p class="fw-bolder" style="font-size:25px;"><b>Find People</b></p>
+                <p style="font-size: 12px;">Search photographers nearby.</p>
+            </div>
+            <div class="col ms-1"><img class="image-people" src="./source/images/findpeople.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+        <input type="text" class="form-control" placeholder="Sanciangko St., Cebu City" aria-label="Username"
+            aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon2">
+            <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                    class="bi bi-pin-map"></i></button></span>
+    </div>
+</div>
+<div class="container">
+    <div class="card text-bg-success w-75 mb-3">
+        <div class="card-body">
+            <div class="row align-items-start">
+                <div class="col d-flex text-center">
+                    <img src="./source/images/kuristationlogo.png" class="circular-image"><h6 class="card-title ps-2">Dominic Taboada<br>Mambaling, Cebu City</h6>
+                </div>
+                <div class="col ps-2 p-0">
+                   <img src="./source/images/Meditation.png" style="width: 55px; height: 40px;">
+                </div>
+            </div>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Button</a>
+        </div>
+      </div>
+</div>
 
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                        class="img-fluid circular-image"></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-                <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </nav>
-    </div>
-    <div class="container">
-        <h1 class="display-5 fw-bold">Good Afternoon, <br> <b class="fw-bolder">Rael!</b></h1>
-    </div>
-    <div class="container">
-        <div class="card" style="width: 16rem;">
-            <div class="card-body">
-              <h6 class="card-title m-0 me-3"><img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                class="img-fluid circular-image">&nbsp; Christ Rile</h6>
-              <h6 style="font-size: 10px;">April 1, 2023 at 10:30 AM</h6>
-              <p class="card-text fs-6">Hi guys, welcome to my vlog! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem mollitia veniam vel nisi obcaecati, quisquam molestias assumenda id laboriosam culpa soluta voluptatibus! Quisquam reprehenderit nostrum fugit ducimus, quia harum doloremque?</p>
-              <img src="./source/images/kuristationlogo.png" class="card-img-top" alt="...">
-              
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="modal-body">
+                YAWA
             </div>
-          </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
     </div>
-    <style>
-        *{
-            background-color: #FEF3E7;
-            /* border: solid red 1px; */
-        }
-        /* Custom CSS for the border */
-        .circular-image {
-            border: 2px solid #F09E5478;
-            /* Change the border color as needed */
-            border-radius: 50%;
-            /* Make the image circular */
-            width: 30px;
-            /* Set the desired width */
-            height: 30px;
-            /* Set the desired height */
-        }
-    </style>
+</div>
+
+
+
+<style>
+    * {
+        /* border: solid red 1px; */
+    }
+
+    /* Custom CSS for the border */
+    .image-people {
+        width: 120px;
+        height: 120px;
+    }
+    .card{
+        background-color: transparent;
+    }
+</style>
 </body>
 
 </html>
