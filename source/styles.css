@@ -10,6 +10,9 @@
 a{
     color: #371B34;
 }
+p{
+    color:#573926;
+}
 input{
     border: none;
 }
@@ -21,8 +24,8 @@ i.bi{
     /* Change the border color as needed */
     border-radius: 50%;
     /* Make the image circular */
-    width: 35px;
+    width: 45px;
     /* Set the desired width */
-    height: 35px;
+    height: 45px;
     /* Set the desired height */
 }
