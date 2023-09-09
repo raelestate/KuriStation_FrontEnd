@@ -29,3 +29,7 @@ i.bi{
     height: 45px;
     /* Set the desired height */
 }
+.btn-orange{
+    background-color: #FE8235;
+    color: white;
+}
