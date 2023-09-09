@@ -1,4 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --kuri-white: #F8F6F5;
+    --kuri-grey: #F8F6F6;
+    --kuri-green: #53A06E;
+    --kuri-red: #BF0000;
+    --kuri-blue: #002CB9;
+    --kuri-orange: #FE8235;
+    --kuri-pink: #FEF3E7;
+    --kuri-brown: #573926;
+    --kuri-black: #0000;
+}
+
+.btn-orange{
+    background-color: var(--kuri-orange);
+    color: var(--kuri-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn-blue{
+    background-color: var(--kuri-blue);
+    color: var(--kuri-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn-brown{
+    background-color: var(--kuri-brown);
+    color: var(--kuri-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn-green{
+    background-color: var(--kuri-green);
+    color: var(--kuri-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn-red{
+    background-color: var(--kuri-red);
+    color: var(--kuri-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn-white{
+    background-color: var(--kuri-white);
+    color: var(--kuri-black);
+
+}
 /* 
 *{
     border: #371B34 solid 1px;
