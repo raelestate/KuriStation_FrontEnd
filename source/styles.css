@@ -47,6 +47,12 @@
     color: var(--kuri-black);
 
 }
+.fc-white{
+    color:var(--kuri-white);
+}
+.fc-brown{
+    color:var(--kuri-brown);
+}
 /* 
 *{
     border: #371B34 solid 1px;
