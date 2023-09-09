@@ -1,0 +1,10 @@
+September 09 , 2023
+
+4:11 pm
+Subscription Plan
+    Selector between buttons added
+
+5:33 pm
+Change Password
+    Corrected the inputs/placeholders/displays
+    Added Hide/View feature js inline

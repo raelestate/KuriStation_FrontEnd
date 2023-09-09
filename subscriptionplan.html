@@ -8,7 +8,7 @@
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./source/styles.css" rel="stylesheet">
 
-    <title>Register | Account</title>
+    <title>Subscription | Account</title>
 </head>
 
 <body>
@@ -17,13 +17,11 @@
         <div class="text-center position-absolute top-50 start-50 translate-middle pb-5 pt-5">
             <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0" alt="KuriStation Logo">
             <p class="fw-bolder m-0 p-3">Subscription Plan</p>
-            <form class="pb-3">
-                <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">1 Month - ₱39</button>
-                <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">3 Months - ₱59</button>
-                <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">6 Months - ₱79</button>
-                <div class="input-group">
-                    <button class="btn btn-success" type="button">1 Year - ₱99</button>
-                </div>
+            <form class="gap-2">
+                <button type="button" class="but pb-2 btn active btn-success" data-bs-toggle="button" aria-pressed="true">1 Month - ₱39</button>
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="button" aria-pressed="true">3 Months - ₱59</button>
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="button" aria-pressed="true">6 Months - ₱79</button>
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="button" aria-pressed="true">1 Year - ₱99</button>
             </form>
 
         </div>
@@ -45,6 +43,20 @@
         }
     </style>
 
-</body>
+    <script>
+        //09-09-2023 4:11pm
+        const button = document.querySelectorAll('.but');
 
+        function plan(){
+            for(let i = 0; i < button.length; i++){
+                button[i].addEventListener('click', function(){
+                    let currentBtn = document.querySelectorAll('.btn-success');
+                    currentBtn[0].className = currentBtn[0].className.replace('btn-success', '');
+                    this.className += ' btn-success';
+                })
+            }
+        }
+        plan();
+    </script>
+</body>
 </html>
