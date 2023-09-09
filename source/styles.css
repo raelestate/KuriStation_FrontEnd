@@ -45,6 +45,8 @@
 .btn-white{
     background-color: var(--kuri-white);
     color: var(--kuri-black);
+    font-weight: 700;
+    font-size: 14px;
 
 }
 .fc-white{
