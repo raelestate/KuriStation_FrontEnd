@@ -23,8 +23,8 @@
                     <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
                   </div>
                   <div class="input-group flex-nowrap pb-3">
-                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-eye"></i></span>
+                    <input id="password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+                    <span class="input-group-text" id="toggle"><i id="eye" class="bi bi-eye"></i></span>
                   </div>
                   <div class="input-group">
                     <button class="btn btn-success" type="button">Login</button>
@@ -48,6 +48,27 @@
             width: 250px;
         }
     </style>
+    <script>
+        function togglePassword(inputId, toggleId, iconId) {
+            const passwordInput = document.getElementById(inputId);
+            const togglePassword = document.getElementById(toggleId);
+            const eyeIcon = document.getElementById(iconId);
+            const currentClass = eyeIcon.className;
+
+            togglePassword.addEventListener("click", function() {
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    eyeIcon.classList.replace('bi-eye','bi-eye-slash');
+                } else {
+                    passwordInput.type = "password";
+                    eyeIcon.classList.replace('bi-eye-slash','bi-eye');
+                }
+            });
+        }
+
+        togglePassword("password", "toggle", "eye");
+
+    </script>
 
 </body>
 
