@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root{
+:root {
     --kuri-white: #F8F6F5;
     --kuri-grey: #F8F6F6;
     --kuri-green: #53A06E;
@@ -10,71 +10,100 @@
     --kuri-pink: #FEF3E7;
     --kuri-brown: #573926;
     --kuri-black: #0000;
+    --kuri-fade: #B7B7B7;
+
 }
 
-.btn-orange{
+.btn-orange {
     background-color: var(--kuri-orange);
     color: var(--kuri-white);
     font-weight: 700;
     font-size: 14px;
 }
-.btn-blue{
+
+.btn-blue {
     background-color: var(--kuri-blue);
     color: var(--kuri-white);
     font-weight: 700;
     font-size: 14px;
 }
-.btn-brown{
+
+.btn-brown {
     background-color: var(--kuri-brown);
     color: var(--kuri-white);
     font-weight: 700;
     font-size: 14px;
 }
-.btn-green{
+
+.btn-green {
     background-color: var(--kuri-green);
     color: var(--kuri-white);
     font-weight: 700;
     font-size: 14px;
 }
-.btn-red{
+
+.btn-red {
     background-color: var(--kuri-red);
     color: var(--kuri-white);
     font-weight: 700;
     font-size: 14px;
 }
-.btn-white{
+
+.btn-white {
     background-color: var(--kuri-white);
     color: var(--kuri-black);
     font-weight: 700;
     font-size: 14px;
 
 }
-.fc-white{
-    color:var(--kuri-white);
+.text-bg-orange{
+    background-color: RGBA(var(--kuri-orange),var(--bs-bg-opacity,1))!important;
 }
-.fc-brown{
-    color:var(--kuri-brown);
+.fc-white {
+    color: var(--kuri-white);
 }
+
+.fc-brown {
+    color: var(--kuri-brown);
+}
+
+.fc-orange {
+    color: var(--kuri-orange);
+}
+
+.fc-fade {
+    color: var(--kuri-fade);
+}
+
+.ff-orange {
+    background-color: var(--kuri-orange);
+}
+
 /* 
 *{
     border: #371B34 solid 1px;
 } */
-*{
+* {
     font-family: 'Inter', sans-serif;
     color: #371B34;
 }
-a{
+
+a {
     color: #371B34;
 }
-p{
-    color:#573926;
+
+p {
+    color: #573926;
 }
-input{
+
+input {
     border: none;
 }
-i.bi{
+
+i.bi {
     font-size: 25px;
 }
+
 .circular-image {
     border: 2px solid #F09E5478;
     /* Change the border color as needed */
@@ -85,7 +114,19 @@ i.bi{
     height: 45px;
     /* Set the desired height */
 }
-.btn-orange{
+
+.circular-image-medium {
+    border: 2px solid #F09E5478;
+    /* Change the border color as needed */
+    border-radius: 50%;
+    /* Make the image circular */
+    width: 60px;
+    /* Set the desired width */
+    height: 60px;
+    /* Set the desired height */
+}
+
+.btn-orange {
     background-color: #FE8235;
     color: white;
 }
