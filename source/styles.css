@@ -11,6 +11,7 @@
     --kuri-brown: #573926;
     --kuri-black: #0000;
     --kuri-fade: #B7B7B7;
+    --kuri-peach: #FEF3E7;
 
 }
 
@@ -55,6 +56,16 @@
     font-weight: 700;
     font-size: 14px;
 
+}
+
+.slot-orange{
+    background-color: var(--kuri-peach);
+    color: var(--kuri-brown);
+    border-radius: 2em;
+}
+.search-message{
+    background-color: var(--kuri-grey);
+    border-radius: 2em;
 }
 .text-bg-orange{
     background-color: RGBA(var(--kuri-orange),var(--bs-bg-opacity,1))!important;
