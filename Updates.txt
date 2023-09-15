@@ -26,4 +26,11 @@ September 14, 2023
     Inbox
         - navbar 
         - color orange
-        
+
+September 15, 2023
+
+Favourites : with the sticky footer
+Inbox: Corrected(need minor revisions)
+Subscription Plan: gapss
+Styles.css added html,body, footer, fav, square-img classes
+inbox-messages: needed revisions(far from it)
