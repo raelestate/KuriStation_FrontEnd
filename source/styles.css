@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root {
-    --kuri-white: #F8F6F5;
+    --kuri-soft-white: #F8F6F5;
+    --kuri-white: #FFFF;
     --kuri-grey: #F8F6F6;
     --kuri-green: #53A06E;
     --kuri-red: #BF0000;
@@ -18,12 +19,12 @@ html {
     position: relative;
     min-height: 100%;
   }
-  body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
+body {
+    margin-bottom: 6em; /* Margin bottom by footer height */
     background-color: var(--kuri-bg);
   }
 
-  footer {
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -73,6 +74,12 @@ html {
     font-size: 14px;
 
 }
+
+.btn-orange {
+    background-color: #FE8235;
+    color: white;
+}
+
 .note-peach{
     background-color: var(--kuri-peach);
     color: var(--kuri-brown);
@@ -130,6 +137,7 @@ a {
 
 p {
     color: #573926;
+    font-weight: 500;
 }
 
 input {
@@ -149,6 +157,7 @@ i.bi {
     /* Set the desired width */
     height: 45px;
     /* Set the desired height */
+    
 }
 
 .circular-image-medium {
@@ -171,7 +180,8 @@ i.bi {
     height: 100px;
 }
 
-.btn-orange {
-    background-color: #FE8235;
-    color: white;
+.notif-card-white{
+    background-color: var(--kuri-white);
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
