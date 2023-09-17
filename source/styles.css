@@ -79,6 +79,10 @@ footer {
     background-color: #FE8235;
     color: white;
 }
+.bg-orange {
+    background-color: #FE8235;
+    color: white;
+}
 
 .note-peach{
     background-color: var(--kuri-peach);
