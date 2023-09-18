@@ -34,3 +34,9 @@ Inbox: Corrected(need minor revisions)
 Subscription Plan: gapss
 Styles.css added html,body, footer, fav, square-img classes
 inbox-messages: needed revisions(far from it)
+
+September 18, 2023
+
+Footer applied in some HTML docs
+Polished 1%
+Notifications not yet Polished
