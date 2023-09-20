@@ -13,6 +13,20 @@
     --kuri-fade: #B7B7B7;
     --kuri-peach: #FEF3E7;
     --kuri-bg: #FBFBFB;
+
+    --bg-soft-white: #F8F6F5;
+    --bg-white: #FFFF;
+    --bg-grey: #F8F6F6;
+    --bg-green: #53A06E;
+    --bg-red: #BF0000;
+    --bg-blue: #002CB9;
+    --bg-orange: #FE8235;
+    --bg-pink: #FEF3E7;
+    --bg-brown: #573926;
+    --bg-black: #0000;
+    --bg-fade: #B7B7B7;
+    --bg-peach: #FEF3E7;
+    --bg-background: #FBFBFB;
 }
 
 html {
