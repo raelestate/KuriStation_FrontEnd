@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
 :root {
     --kuri-soft-white: #F8F6F5;
     --kuri-white: #FFFF;
@@ -33,8 +32,18 @@ footer {
     width: 100%;
     height: 60px;
     line-height: 60px;
-}
 
+}
+.breadcrumb{
+    font-size: 11px;
+}
+.breadcrumb >.active {
+    color: black;
+    font-weight: bold;
+ }
+ .breadcrumb a{
+    text-decoration: none;
+ }
 .btn-orange {
     background-color: var(--kuri-orange);
     color: var(--kuri-white);
