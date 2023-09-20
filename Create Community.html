@@ -36,6 +36,35 @@
             </div>
         </div>
     </div>
+<div class="container">
+    <div class="row">
+        <div class="container-fluid text-center border border-black rounded-2 p-5">
+            <div class="col">
+                <i class="bi bi-plus-square-fill"></i>
+            </div>
+            <div class="col">
+                <p>
+                    Upload or drop your community images here
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="input-group pt-3 pb-2">
+    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Name" aria-label="Community Name"
+        aria-describedby="addon-wrapping">
+</div>
+<div class="input-group pb-2">
+    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Description" aria-label="Community Description"
+        aria-describedby="addon-wrapping">
+</div>
+<div class="input-group pb-2">
+    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="+ Add Community Members" aria-label="Community Description"
+        aria-describedby="addon-wrapping">
+</div>
+<div class="d-grid gap-2">
+    <button class="btn btn-success" type="button">Create Community</button>
+  </div>
 
     <footer class="container px-3">
         <nav class="navbar fixed-bottom navbar-expand-lg bg-white">
@@ -49,6 +78,9 @@
     </footer>
 
     <style>
+        /* *{
+            border: 1px solid red;
+        } */
         .image-people {
             width: 50px;
             height: 50px;
@@ -62,6 +94,12 @@
             background-color: transparent;
         }
     </style>
+    <script>
+        $(function () {
+            // Make the element draggable
+            $("#draggable").draggable();
+        });
+    </script>
 </body>
 
 </html>
