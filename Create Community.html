@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
     <title>Community</title>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                        class="img-fluid circular-image"></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-                <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
+   <!-- HEADER FIXED -->
+   <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar" href="Profile - Personal Details.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+                        class="img-fluid circular-image-head"></a>
+                <a class="navbar" href="search.html"><i class="bi head-search"></i></a>
+                <a class="navbar" href="Add Post.html"><i class="bi head-add-active"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
+                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
-    </div>
-    <div class="container text-center">
+    </header>
+    <!-- END OF HEADER FIXED -->
+
+    <div class="container text-center py-3">
         <div class="container text-start slot-orange">
             <div class="row align-items-center p-3">
                 <div class="col">
@@ -36,46 +40,48 @@
             </div>
         </div>
     </div>
-<div class="container">
-    <div class="row">
-        <div class="container-fluid text-center border border-black rounded-2 p-5">
-            <div class="col">
-                <i class="bi bi-plus-square-fill"></i>
-            </div>
-            <div class="col">
-                <p>
-                    Upload or drop your community images here
-                </p>
+    <div class="container">
+        <div class="row">
+            <div class="container-fluid text-center border border-black rounded-2 p-5">
+                <div class="col">
+                    <i class="bi bi-plus-square-fill"></i>
+                </div>
+                <div class="col">
+                    <p>
+                        Upload or drop your community images here
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="input-group pt-3 pb-2">
-    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Name" aria-label="Community Name"
-        aria-describedby="addon-wrapping">
-</div>
-<div class="input-group pb-2">
-    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Description" aria-label="Community Description"
-        aria-describedby="addon-wrapping">
-</div>
-<div class="input-group pb-2">
-    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="+ Add Community Members" aria-label="Community Description"
-        aria-describedby="addon-wrapping">
-</div>
-<div class="d-grid gap-2">
-    <button class="btn btn-success" type="button">Create Community</button>
-  </div>
+    <div class="input-group pt-3 pb-2">
+        <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Name" aria-label="Community Name"
+            aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group pb-2">
+        <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Description" aria-label="Community Description"
+            aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group pb-2">
+        <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="+ Add Community Members" aria-label="Community Description"
+            aria-describedby="addon-wrapping">
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn btn-success" type="button">Create Community</button>
+    </div>
 
+    <!--FOOTER FIXED-->
     <footer class="container px-3">
-        <nav class="navbar fixed-bottom navbar-expand-lg bg-white">
+        <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
             <div class="container-fluid d-flex justify-content-evenly">
-                <a class="navbar-brand" href="#"><i class="bi bi-house"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-person-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-chat"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-people"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
+    <!--END OF FOOTER-->
 
     <style>
         /* *{

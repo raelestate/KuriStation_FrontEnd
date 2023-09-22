@@ -5,118 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
-    <title>Notifications</title>
+    <title>Notifications | KuriStation</title>
 </head>
 <body>
     <!-- Header -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                        class="img-fluid circular-image"></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-                <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
+    <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar" href="Account Settings.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+                        class="img-fluid circular-image-head"></a>
+                <a class="navbar" href="search.html"><i class="bi head-search"></i></a>
+                <a class="navbar" href="Add Post.html"><i class="bi head-add-active"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
+                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
-    </div>
+    </header>
     <!-- END OF HEADER -->
     
     <!-- SECTION -->
-    <div class="container text-center note-peach card-title">
-        <h3 class="p-2 fs-6 fw-bold">Notifications</h3>
-    </div>
-
-    <section class="container note-peach pt-2 pb-2">
-        <div class="row m-2">
-            <div class="col">
-                <div type="button" class="d-flex align-items-center notif-card-white">
-                    <img src="./source/images/kuristationlogo.png" alt="" class="circular-image m-2">
-                    <ul class="col list-unstyled ps-2 ">
-                        <li>Rael Neri</li>
-                        <li class="m-0 fc-fade" style="font-size: 12px; font-weight: 200;">Liked your message</li>
-                    </ul>
-                </div>
-                <div type="button" class="d-flex align-items-center notif-card-white">
-                    <img src="./source/images/kuristationlogo.png" alt="" class="circular-image m-2">
-                    <ul class="col list-unstyled ps-2 ">
-                        <li>Christ Rile A. Parinasan</li>
-                        <li class="m-0 fc-fade" style="font-size: 12px; font-weight: 200;">Commented : Yoww wtf</li>
-                    </ul>
-                </div>
-                <div type="button" class="d-flex align-items-center notif-card-white">
-                    <img src="./source/images/kuristationlogo.png" alt="" class="circular-image m-2">
-                    <ul class="col list-unstyled ps-2 ">
-                        <li>Daryll Talaba</li>
-                        <li class="m-0 fc-fade" style="font-size: 12px; font-weight: 200;">Commented : This photo lits</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- OPTIONS -->
+        <div class="container bg-pink rounded-3">
+            <h6 class="fw-bold p-2 m-2 text-center">Notifications</b></h6>
         </div>
-    </section>
-
-    <div class="container pt-3">
-        <div class="card">
-            <div class="row">
-                <div class="col text-center">
-                    <img src="./source/images/kuristationlogo.png" class="circular-image-medium" alt="">
-                </div>
-                <div class="col pt-3">
-                    <h5 class="text-start fw-bolder m-0">IPhone 14</h5>
-                    <h5 class="text-start">Camera Device</h5>
-                    <h6 class="text-start" style="color:#707070">Lorem ipsum dolor, sit amet consectetur</h6>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div type="button" class="container p-1">
+                <div class="border-0 m-0">
+                    <div class="btn-white">
+                        <div class="row align-items-start ">
+                            <div class="col d-flex text-start align-items-center">
+                                <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                                <ul class="list-unstyled pt-3">
+                                    <li class="ps-2 name">Norman Black</li>
+                                    <li class="ps-2 m-0 status">Messaged you</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </div>
-    <div class="container pt-3">
-        <div class="card">
-            <div class="row">
-                <div class="col text-center">
-                    <img src="./source/images/kuristationlogo.png" class="circular-image-medium" alt="">
-                </div>
-                <div class="col pt-3">
-                    <h5 class="text-start fw-bolder m-0">IPhone 14</h5>
-                    <h5 class="text-start">Camera Device</h5>
-                    <h6 class="text-start" style="color:#707070">Lorem ipsum dolor, sit amet consectetur</h6>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="container pt-3">
-        <div class="card">
-            <div class="row">
-                <div class="col text-center">
-                    <img src="./source/images/kuristationlogo.png" class="circular-image-medium" alt="">
-                </div>
-                <div class="col pt-3">
-                    <h5 class="text-start fw-bolder m-0">IPhone 14</h5>
-                    <h5 class="text-start">Camera Device</h5>
-                    <h6 class="text-start" style="color:#707070">Lorem ipsum dolor, sit amet consectetur</h6>
+            <div type="button" class="container p-1">
+                <div class="border-0 m-0">
+                    <div class="btn-white">
+                        <div class="row align-items-start ">
+                            <div class="col d-flex text-start align-items-center">
+                                <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                                <ul class="list-unstyled pt-3">
+                                    <li class="ps-2 name">Norman Black</li>
+                                    <li class="ps-2 m-0 status">Liked your post</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="container pt-3">
-        <div class="card">
-            <div class="row">
-                <div class="col text-center">
-                    <img src="./source/images/kuristationlogo.png" class="circular-image-medium" alt="">
-                </div>
-                <div class="col pt-3">
-                    <h5 class="text-start fw-bolder m-0">IPhone 14</h5>
-                    <h5 class="text-start">Camera Device</h5>
-                    <h6 class="text-start" style="color:#707070">Lorem ipsum dolor, sit amet consectetur</h6>
+        <!-- End of OPTIONS -->
+        <!-- MESSAGES-->
+     <div type="button" class="container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn-white">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
+
+    <div type="button" class="container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn-white">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div type="button" class="container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn-white">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div type="button" class="container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn-white">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div type="button" class="container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn-white">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div type="button" class="container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn-white">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MESSAGES END -->
+
+    <!--FLOAT-->
     <div class="container-fluid text-end">
         <a href="#" class="btn btn-orange text-end rounded-circle floating-button"><i class="bi bi-pencil fc-white"></i></a>
 </div>
@@ -124,17 +194,17 @@
     <!-- Footer -->
     <footer class="container px-3">
         <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
-            <div class="container-fluid d-flex justify-content-evenly align ">
-                <a class="navbar-brand" href="#"><i class="bi bi-house"></i></a>
-                <a class="navbar-brand active" href="#"> <i class="bi bi-person-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-chat"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-people"></i></a>
+            <div class="container-fluid d-flex justify-content-evenly">
+                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
     <!-- END OF FOOTER -->
     <style>
-                .floating-button {
+        .floating-button {
             position: fixed;
             bottom: 100px; /* Adjust this value to change the vertical position */
             right: 20px; /* Adjust this value to change the horizontal position */

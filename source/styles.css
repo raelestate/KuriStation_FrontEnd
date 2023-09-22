@@ -13,6 +13,7 @@
     --kuri-fade: #B7B7B7;
     --kuri-peach: #FEF3E7;
     --kuri-bg: #FBFBFB;
+    --kuri-fade-orange: rgba(240, 158, 84, 0.47);
 
     --bg-soft-white: #F8F6F5;
     --bg-white: #FFFF;
@@ -35,11 +36,31 @@ html {
 }
 
 body {
-    margin-bottom: 6em;
-    /* Margin bottom by footer height */
+    margin-top: 5em;
+    margin-bottom: 5em;
     background-color: var(--kuri-bg);
 }
-
+.icon_badge{
+    position: absolute;
+    top: 1px;
+    right: -1px;
+    width: 22px;
+    height: 22px;
+    background: var(--kuri-orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--kuri-white);
+    font-size: 0.8em;
+}
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+}
 footer {
     position: absolute;
     bottom: 0;
@@ -92,17 +113,28 @@ footer {
     font-size: 14px;
 }
 
-.btn-white {
-    background-color: var(--kuri-white);
-    color: var(--kuri-black);
-
-}
-
 .btn-orange {
     background-color: #FE8235;
     color: white;
 }
+.bg-pink{
+    background-color: var(--bg-pink);
+    color: var(--bg-brown);
+    width: 80%;
+}
 
+.btn-white{
+    background-color: var(--bg-soft-white);
+    color: var(--bg-brown);
+    width: 100%;
+    padding: 0;
+}
+
+.btn-soft {
+    background-color: var(--bg-soft-white);
+    color: var(--bg-brown);
+    width: 95%;
+}
 .bg-orange {
     background-color: #FE8235;
     color: white;
@@ -119,7 +151,6 @@ footer {
 .note-peach {
     background-color: var(--kuri-peach);
     color: var(--kuri-brown);
-
 }
 
 .slot-orange {
@@ -190,7 +221,7 @@ i.bi {
 }
 
 .circular-image {
-    border: 2px solid #F09E5478;
+    border: 2px solid #573926;
     /* Change the border color as needed */
     border-radius: 50%;
     /* Make the image circular */
@@ -200,9 +231,18 @@ i.bi {
     /* Set the desired height */
 
 }
-
+.circular-image-head {
+    border: 4px solid var(--kuri-fade-orange);
+    /* Change the border color as needed */
+    border-radius: 50%;
+    /* Make the image circular */
+    width: 45px;
+    /* Set the desired width */
+    height: 45px;
+    /* Set the desired height */
+}
 .circular-image-medium {
-    border: 2px solid #F09E5478;
+    border: 2px solid #573926;
     /* Change the border color as needed */
     border-radius: 50%;
     /* Make the image circular */
@@ -230,4 +270,21 @@ i.bi {
 }
 .bg-brown{
     background-color: var(--kuri-brown);
+}
+
+.name{
+    color: var(--kuri-brown);
+    font-size: 15px;
+    font-weight: 800;
+    width: 15em;
+}
+.status{
+    color: var(--kuri-brown);
+    font-size: 12px;
+    font-weight: 200;
+    /*Ellipsis for overflowing 1 liner inbox*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
