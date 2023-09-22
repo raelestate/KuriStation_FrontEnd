@@ -95,8 +95,6 @@ footer {
 .btn-white {
     background-color: var(--kuri-white);
     color: var(--kuri-black);
-    font-weight: 700;
-    font-size: 14px;
 
 }
 
@@ -111,6 +109,10 @@ footer {
 }
 .bg-orange {
     background-color: var(--kuri-green);
+    color: white;
+}
+.bg-green{
+    background-color: var(--bg-green);
     color: white;
 }
 
