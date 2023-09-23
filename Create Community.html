@@ -8,7 +8,7 @@
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
-    <title>Community</title>
+    <title>Create Community | KuriStation</title>
 </head>
 
 <body>
@@ -27,46 +27,50 @@
     </header>
     <!-- END OF HEADER FIXED -->
 
-    <div class="container text-center py-3">
-        <div class="container text-start slot-orange">
-            <div class="row align-items-center p-3">
-                <div class="col">
-                    <p class="fw-bolder m-0" style="font-size:25px;"><b>Community</b></p>
-                    <p style="font-size: 12px;">Connect to people with same interest.</p>
-                </div>
-                <div class="col ms-1 text-end">
-                    <i class="bi bi-people-fill fc-orange" style="font-size: 40px;"></i>
-                </div>
+    <!-- TITLE -->
+    <div class="container bg-pink rounded-5">
+        <div class="row justify-content-between p-2">
+            <div class="col-7">
+                <p style="font-size:25px; font-weight: 800;">Community</p>
+                <p style="font-size: 12px;">Connect to other people with same interest.</p>
             </div>
+            <div class="col-4 title-community"></div>
         </div>
     </div>
-    <div class="container">
+    <!-- END OF TITLE -->
+
+    <div class="container btn-soft pt-2">
         <div class="row">
             <div class="container-fluid text-center border border-black rounded-2 p-5">
                 <div class="col">
                     <i class="bi bi-plus-square-fill"></i>
                 </div>
                 <div class="col">
-                    <p>
+                    <p style="font-size: 12px;">
                         Upload or drop your community images here
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="input-group pt-3 pb-2">
+
+    <div class="container pt-3 btn-soft">
+        <div class="input-group pb-2">
         <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Name" aria-label="Community Name"
-            aria-describedby="addon-wrapping">
-    </div>
-    <div class="input-group pb-2">
+        aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group pb-2">
         <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Description" aria-label="Community Description"
-            aria-describedby="addon-wrapping">
-    </div>
-    <div class="input-group pb-2">
+        aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group pb-2">
         <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="+ Add Community Members" aria-label="Community Description"
-            aria-describedby="addon-wrapping">
+        aria-describedby="addon-wrapping">
     </div>
-    <div class="d-grid gap-2">
+
+    </div>
+    
+    <div class="d-grid gap-3 m-3">
         <button class="btn btn-success" type="button">Create Community</button>
     </div>
 
@@ -84,18 +88,9 @@
     <!--END OF FOOTER-->
 
     <style>
-        /* *{
-            border: 1px solid red;
-        } */
-        .image-people {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            border: #FE8235 solid 1px;
+        p{
+            margin: 0;
         }
-
-        /* Custom CSS for the border */
-
         .card {
             background-color: transparent;
         }

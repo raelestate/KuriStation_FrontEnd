@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Recommendation Badge</title>
 </head>
-<div class="container pt-4">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary pb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                    class="img-fluid circular-image"></a>
-            <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-            <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
-            <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
-            <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
-        </div>
-    </nav>
-</div>
-<div class="container text-center">
-    <div class="container text-start">
-        <div class="row align-items-center p-3">
-            <div class="col">
-                <p class="fw-bolder" style="font-size:25px;"><b>Find People</b></p>
+    <!-- Header -->
+    <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar" href="Account Settings.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+                        class="img-fluid circular-image-head"></a>
+                <a class="navbar" href="search.html"><i class="bi head-search"></i></a>
+                <a class="navbar" href="Add Post.html"><i class="bi head-add-active"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
+                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
+            </div>
+        </nav>
+    </header>
+    <!-- END OF HEADER -->
+    
+    <!-- TITLE -->
+    <div class="container bg-pink rounded-5">
+        <div class="row justify-content-between p-2">
+            <div class="col-7">
+                <p style="font-size:25px; font-weight: 800;">Find People</p>
                 <p style="font-size: 12px;">Search photographers nearby.</p>
             </div>
-            <div class="col ms-1"><img class="image-people" src="./source/images/findpeople.png">
-            </div>
+            <div class="col-4 title-people"></div>
         </div>
     </div>
-</div>
-<div class="container">
+    <!-- END OF TITLE -->
+
+<div class="container p-3">
     <div class="card text-bg-success mb-3 w-100">
         <div class="card-body text-center">
-            <img src="./source/images/Meditation.png" alt="" class="img-card-top w-50">
+            <div class="bg-icons-badge"></div>
           <h5 class="card-title p-3" style="font-size: 25px; font-weight: 700;">Recommendation Badge</h5>    
           <button class="btn btn-green w-50">Okay</button>    
         </div>
@@ -44,16 +48,18 @@
 </div>
 
 
-<div class="container pt-4">
-    <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary pb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="bi bi-house"></i></a>
-            <a class="navbar-brand active" href="#"> <i class="bi bi-person-badge"></i></a>
-            <a class="navbar-brand" href="#"><i class="bi bi-chat"></i></a>
-            <a class="navbar-brand" href="#"><i class="bi bi-people"></i></a>
-        </div>
-    </nav>
-</div>
+    <!-- Footer -->
+    <footer class="container px-3">
+        <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
+            <div class="container-fluid d-flex justify-content-evenly">
+                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
+            </div>
+        </nav>
+    </footer>
+    <!-- END OF FOOTER -->
 
 
 
@@ -79,7 +85,9 @@
 
 
 <style>
-
+    p{
+        margin: 0;
+    }
     /* Custom CSS for the border */
     .image-people {
         width: 130px;

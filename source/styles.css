@@ -119,8 +119,8 @@ footer {
 }
 .bg-pink{
     background-color: var(--bg-pink);
-    color: var(--bg-brown);
-    width: 80%;
+    color: var(--kuri-brown);
+    width: 93%;
 }
 
 .btn-white{
@@ -136,11 +136,7 @@ footer {
     width: 95%;
 }
 .bg-orange {
-    background-color: #FE8235;
-    color: white;
-}
-.bg-orange {
-    background-color: var(--kuri-green);
+    background-color: var(--kuri-orange);
     color: white;
 }
 .bg-green{
@@ -259,8 +255,8 @@ i.bi {
 }
 
 .square-image {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .notif-card-white {
