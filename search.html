@@ -5,57 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
     <title>Kuristation | Search</title>
 </head>
 <body>
-    <div class="container pt-4">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary pb-4">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                        class="img-fluid circular-image"></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-                <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
+
+    <!-- HEADER FIXED -->
+    <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar" href="Account Settings.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+                        class="img-fluid circular-image-head"></a>
+                <a class="navbar" href="search.html"><i class="bi head-search-active"></i></a>
+                <a class="navbar" href="Add Post.html"><i class="bi head-add"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
+                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
-    </div>
+    </header>
+    <!-- END OF HEADER FIXED -->
+
     <div class="container pt-2">
-        <input type="text" class="form-control" placeholder="Search here">
+        <input type="text" class="ps-4 p-2 form-control search-message" placeholder="Search here...">
+        
+        <p class="my-2 name">Categories</p>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col"><button class="btn btn-orange">
-                Nature
-            </button></div>
-            <div class="col"><button class="btn">
-                Lorem
-            </button></div>
-            <div class="col"><button class="btn">
-                ipsum
-            </button></div>
-            <div class="col"><button class="btn">
-                Nature
-            </button></div>
-            <div class="col"><button class="btn">
-                Nature
-            </button></div>
-            <div class="col"><button class="btn">
-                Nature
-            </button></div>
-            <div class="col"><button class="btn">
-                Nature
-            </button></div>
-            <div class="col"><button class="btn">
-                Nature
-            </button></div>
-            <div class="col"><button class="btn">
-                Nature
-            </button></div>
-        </div>
+    <div>
         
     </div>
 
+    <div class="container p-2 ps-3 d-flex align-content-start flex-wrap">
+        <div class="col">
+            <button class=" btn btn-orange ">Nature</button>
+            <button class=" btn btn-grey">Portrait</button>
+            <button class=" btn btn-grey">Family</button>
+            <button class=" btn btn-grey">Landscape</button>
+            <button class=" btn btn-grey">Trending</button>
+            <button class=" btn btn-grey">Sceneries</button>
+            <button class=" btn btn-grey">Waters</button>
+            <button class=" btn btn-grey">Astrophotography</button>
+            <button class=" btn btn-grey">Climate</button>
+            <button class=" btn btn-grey">Animals</button>
+        </div>
+        
+    </div>
+    <!--FOOTER FIXED-->
+    <footer class="container px-3">
+        <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
+            <div class="container-fluid d-flex justify-content-evenly">
+                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
+            </div>
+        </nav>
+    </footer>
+    <!--END OF FOOTER-->
 </body>
 </html>
