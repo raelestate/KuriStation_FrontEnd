@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="container pt-4">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary pb-4">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
-                        class="img-fluid circular-image"></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-                <a class="navbar-brand" href="#"> <i class="bi bi-plus-square"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-trash"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-bell"></i></a>
+
+    <!-- HEADER FIXED -->
+    <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container-fluid d-flex justify-content-between">
+                <a href="#">Back</a>
+                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
-    </div>
+    </header>
+    <!-- END OF HEADER FIXED -->
 
     <div class="container">
         <button class="btn w-100" type="button" style="background-color:#FE8235; color: aliceblue;"><i class="bi bi-person" style="color: aliceblue; font-size: 20px;"></i>&nbsp;Personal Details</button>
     </div>
-    <div class="container text-center pt-2">
+    <div class="container text-center p-2">
         <img src="./source/images/kuristationlogo.png" class="rounded-circle" style="border: #FE8235 solid 3px;" alt="">
     </div>
     <div class="container">
-        <div class="card rounded-5">
+        <div class=" rounded-5">
             <div class="card-body rounded-5">
-                <div class="row align-items-start">
+                <div class="row justify-content-center">
                     <div class="row">
-                        <div class="col d-flex text-start">
+                        <div class="col">
                             <ul class="list-unstyled">
                                 <li class="ps-1" style="font-size: 20px;"><b>Jhon Bear</b></li>
                                 <li class="ps-1 m-0" style="font-size: 14px; font-weight: 200;">Following</li>
                             </ul>
                         </div>
-                        <div class="col text-center">
+                        <div class="col text-end">
                             <button class="btn-green btn m-1" type="button"><i class="bi bi-send-fill" style="color: aliceblue; font-size: 15px;"></i></button>
                             <button class="btn-red btn m-1" type="button"><i class="bi bi-flag-fill" style="color: aliceblue; font-size: 15px;"></i></button>
                         </div>
@@ -105,15 +105,18 @@
         </div>
     </div>
 
+    <!--FOOTER FIXED-->
     <footer class="container px-3">
         <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
             <div class="container-fluid d-flex justify-content-evenly">
-                <a class="navbar-brand" href="#"><i class="bi bi-house"></i></a>
-                <a class="navbar-brand active" href="#"> <i class="bi bi-person-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-chat"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi bi-people"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
+    <!--END OF FOOTER-->
+
 </body>
 </html>
