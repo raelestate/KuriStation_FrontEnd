@@ -6,48 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="./source/styles.css" rel="stylesheet">
 
     <title>Login</title>
 </head>
 
-<body>
-
-    <div class="container align-content-center">
+<body class="no-header">
+    <header class="p-4 text-end">
+        <a href="Register-PersonalDetails.html" class="">Sign up</a>
+    </header>
+    <div class="container-fluid align-content-center">
         <div class="text-center position-absolute top-50 start-50 translate-middle pb-5 pt-5">
-            <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0" alt="KuriStation Logo">
+            <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0 transparent" alt="KuriStation Logo">
             <p class="fw-bolder m-0 p-3">Login to your account</p>
             <form class="m-0">
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                  </div>
-                  <div class="input-group flex-nowrap pb-3">
-                    <input id="password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="toggle"><i id="eye" class="bi bi-eye"></i></span>
-                  </div>
-                  <div class="input-group">
-                    <button class="btn btn-success" type="button">Login</button>
-                  </div>
-                  
+               <div class="input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="text" class="ps-3 p-2 rounded-4" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                </div> 
+                <div class="input-group form-control p-0 border-black rounded-3">
+                    <input id="password" class="ps-3 p-2 pass rounded-4" type="password" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+                    <span class="transparent span-btn" id="toggle"><i id="eye" class="bi bi-eye"></i></span>
+                </div>
+                <button class="btn-green mt-2 mb-2">Login</button>
+                <a href="recoveraccount.html" style="font-size: 14px;">Forgot Password?</a>
             </form>
 
         </div>
     </div>
-    <style>
-        form input.form-control.form-control-lg,
-        form input.form-control.form-control,
-        form input.form-control.form-control-sm {
-            border: 1px #371B34 solid;
-            width: 250px;
-        }
-        a{
-            color: #371B34;
-        }
-        button{
-            width: 250px;
-        }
-    </style>
+    
     <script>
         function togglePassword(inputId, toggleId, iconId) {
             const passwordInput = document.getElementById(inputId);

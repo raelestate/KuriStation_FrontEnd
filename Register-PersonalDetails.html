@@ -7,73 +7,57 @@
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./source/styles.css" rel="stylesheet">
-
     <title>Register | Personal Details</title>
 </head>
 
 <body>
+    <!-- HEADER FIXED -->
+    <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white p-3">
+              <div class="container-fluid d-flex justify-content-between">
+                <a href="login.html">Back</a>
+                <a href="login.html">Log in</a>
+            </div>
+        </nav>
+    </header>
+    <!-- END OF HEADER FIXED -->
 
     <div class="container align-content-center">
-        <div class="text-center position-absolute top-50 start-50 translate-middle pb-5 pt-5">
-            <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0" alt="KuriStation Logo">
+        <div class="text-center position-absolute top-50 start-50 translate-middle">
+            <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0 transparent" alt="KuriStation Logo">
             <p class="fw-bolder m-0 p-3">Register</p>
-            <form class="m-0">
-                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page">Personal Details</li>
-                        <li class="breadcrumb-item">Identification</li>
-                        <li class="breadcrumb-item">Account Setup</li>
-                    </ol>
-                </nav>
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="text" class="form-control" placeholder="First Name" aria-label="First Name"
-                        aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                </div>
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
-                        aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                </div>
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="text" class="form-control" placeholder="Address" aria-label="Address"
-                        aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                </div>
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="date" class="form-control" placeholder="Birthdate" aria-label="Birthdate"
-                        aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                </div>
-                <div class="input-group flex-nowrap pb-3">
-                    <input type="number" class="form-control" placeholder="Contact Number" aria-label="Contact Number"
-                        aria-describedby="addon-wrapping">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                </div>
-                <div class="input-group">
-                    <button class="btn btn-success" type="button">Login</button>
-                </div>
 
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Personal Details</li>
+                    <li class="breadcrumb-item">Identification</li>
+                    <li class="breadcrumb-item">Account</li>
+                </ol>
+            </nav>
+
+            <form>
+                <div class="input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="text" class="ps-3 p-2 rounded-4" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping">
+                </div> 
+                <div class="input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="text" class="ps-3 p-2 rounded-4" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping">
+                </div> 
+                <div class="input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="text" class="ps-3 p-2 rounded-4" placeholder="Address" aria-label="Address" aria-describedby="addon-wrapping">
+                </div> 
+                <div class="input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="date" class="ps-3 p-2 rounded-4" placeholder="Birthdate" aria-label="Birthdate" aria-describedby="addon-wrapping">
+                </div> 
+                <div class="input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="number" class="ps-3 p-2 rounded-4" placeholder="Contact Number" aria-label="Contact Number" aria-describedby="addon-wrapping">
+                </div> 
+                <div>
+                    <button class="btn-green">Next</button>
+                </div>
             </form>
 
         </div>
     </div>
-    <style>
-        form input.form-control.form-control-lg,
-        form input.form-control.form-control,
-        form input.form-control.form-control-sm {
-            border: 1px #371B34 solid;
-            width: 250px;
-        }
-
-        a {
-            color: #371B34;
-        }
-
-        button {
-            width: 250px;
-        }
-    </style>
 
 </body>
 
