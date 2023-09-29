@@ -14,11 +14,11 @@
 <body>
     
     <header class="container">
-        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+        <nav class="navbar fixed-top bg-white">
             <div class="container-fluid d-flex justify-content-between">
                 <a class="navbar" href="Account Settings.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
                         class="img-fluid circular-image-head"></a>
-                <a class="navbar" href="search.html"><i class="bi head-search"></i></a>
+                <a class="navbar" href="search.html" ><i class="bi head-search" ></i></a>
                 <a class="navbar" href="Add Post.html"><i class="bi head-add-active"></i></a>
                 <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
                 <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
@@ -27,19 +27,22 @@
     </header>
 
     <!-- OPTIONS -->
-    <div class="container bg-pink rounded-3">
+    <section>
+        <div class="container bg-pink rounded-3">
         <h6 class="fw-bold p-2 m-2 text-center">Add Post / Listing</b></h6>
-    </div>
-    <div class="container py-2 my-2 bg-pink rounded-3">
-        <div class="col text-center">
-            <a href="#">
-                <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-pen-fill" style="font-size: 15px;"></i>&nbsp;Create Listing</b></h6>
-            </a>
-            <a href="#">
-                <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-app-indicator" style="font-size: 15px;"></i>&nbsp;Create Post</b></h6>
-            </a>
         </div>
-    </div>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div class="col text-center">
+                <a href="#">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-pen-fill" style="font-size: 15px;"></i>&nbsp;Create Listing</b></h6>
+                </a>
+                <a href="#">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-app-indicator" style="font-size: 15px;"></i>&nbsp;Create Post</b></h6>
+                </a>
+            </div>
+        </div>
+    </section>
+    
     <!-- End of OPTIONS -->
 
     <!-- Posts -->
@@ -65,48 +68,12 @@
                         Naa kog kawasan, OMG!!!
                     </p>
                     <img src="./source/images/drone-shot-of-kawasan-falls.jpg" class="card-img-top rounded-5" alt="...">
-                    <div class="col text-center pt-2">
-                        <button class="btn"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
+                    <div class="col pt-2 d-flex justify-content-around">
+                        <button class="btn btn-s"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
                             Like</button>
-                        <button class="btn rounded-4"><i class="bi bi-chat fc-brown" style="font-size: 20px;"></i>
+                        <button class="btn btn-s"><i class="bi bi-chat fc-brown" style="font-size: 20px;"></i>
                             Comment</button>
-                        <button class="btn rounded-4"><i class="bi bi-share fc-brown" style="font-size: 20px;"></i>
-                            Share</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End of Post-->
-    <!-- Posts -->
-    <div class="container">
-        <div class="card rounded-5 p-2">
-            <div class="card-body rounded-5">
-                <div class="row align-items-start">
-                    <div class="col d-flex text-start">
-                        <img src="./source/images/kuristationlogo.png" class="circular-image-head">
-                        <div class="col">
-                            <ul class="list-unstyled">
-                                <li class="ps-1" style="font-size: 17px;">Travis Topper</li>
-                                <li class="ps-1 m-0" style="font-size: 11px; font-weight: 200;">April 1, 2022 at 10:00PM
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col text-end">
-                            <button class="btn btn-green rounded-4"><i class="bi click-heart-fill"></i></button>
-                            <button class="btn btn-green rounded-4"><i class="bi click-send-fill fc-white"></i></button>
-                        </div>
-                    </div>
-                    <p class="card-text" style="font-size: 12px;">
-                        Naa kog kawasan, OMG!!!
-                    </p>
-                    <img src="./source/images/drone-shot-of-kawasan-falls.jpg" class="card-img-top rounded-5" alt="...">
-                    <div class="col text-center pt-2">
-                        <button class="btn"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
-                            Like</button>
-                        <button class="btn rounded-4"><i class="bi bi-chat fc-brown" style="font-size: 20px;"></i>
-                            Comment</button>
-                        <button class="btn rounded-4"><i class="bi bi-share fc-brown" style="font-size: 20px;"></i>
+                        <button class="btn btn-s"><i class="bi bi-share fc-brown" style="font-size: 20px;"></i>
                             Share</button>
                     </div>
                 </div>
@@ -137,12 +104,48 @@
                         Naa kog kawasan, OMG!!!
                     </p>
                     <img src="./source/images/drone-shot-of-kawasan-falls.jpg" class="card-img-top rounded-5" alt="...">
-                    <div class="col text-center pt-2">
-                        <button class="btn"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
+                    <div class="col pt-2 d-flex justify-content-around">
+                        <button class="btn btn-s"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
                             Like</button>
-                        <button class="btn rounded-4"><i class="bi bi-chat fc-brown" style="font-size: 20px;"></i>
+                        <button class="btn btn-s"><i class="bi bi-chat fc-brown" style="font-size: 20px;"></i>
                             Comment</button>
-                        <button class="btn rounded-4"><i class="bi bi-share fc-brown" style="font-size: 20px;"></i>
+                        <button class="btn btn-s"><i class="bi bi-share fc-brown" style="font-size: 20px;"></i>
+                            Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Post-->
+    <!-- Posts -->
+    <div class="container p-2">
+        <div class="card rounded-5">
+            <div class="card-body rounded-5">
+                <div class="row align-items-start">
+                    <div class="col d-flex text-start">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image-head">
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="ps-1" style="font-size: 17px;">Travis Topper</li>
+                                <li class="ps-1 m-0" style="font-size: 11px; font-weight: 200;">April 1, 2022 at 10:00PM
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col text-end">
+                            <button class="btn btn-green rounded-4"><i class="bi click-heart-fill"></i></button>
+                            <button class="btn btn-green rounded-4"><i class="bi click-send-fill fc-white"></i></button>
+                        </div>
+                    </div>
+                    <p class="card-text" style="font-size: 12px;">
+                        Naa kog kawasan, OMG!!!
+                    </p>
+                    <img src="./source/images/drone-shot-of-kawasan-falls.jpg" class="card-img-top rounded-5" alt="...">
+                    <div class="col pt-2 d-flex justify-content-around">
+                        <button class="btn btn-s"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
+                            Like</button>
+                        <button class="btn btn-s"><i class="bi bi-chat fc-brown" style="font-size: 20px;"></i>
+                            Comment</button>
+                        <button class="btn btn-s"><i class="bi bi-share fc-brown" style="font-size: 20px;"></i>
                             Share</button>
                     </div>
                 </div>
@@ -166,7 +169,33 @@
             text-decoration: none;
         }
     </style>
+  <!--
+    <script>
+        const addActiveLink = document.querySelector('#add');
+        const collapseSection = document.querySelector('#collapseSection');
 
+        function hideSection() {
+        collapseSection.classList.remove('show');
+        }
+        // Event listener to hide the section when scrolling starts
+        window.addEventListener('scroll', hideSection);
+
+        addActiveLink.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default link behavior
+            let offset = parseFloat(getComputedStyle(document.body).marginTop);
+
+            if (collapseSection.classList.contains('show')) {
+                collapseSection.classList.remove('show');
+            } else {
+                collapseSection.classList.add('show');
+            }
+            window.scrollTo({
+                top: collapseSection.offsetTop - offset,
+                behavior: 'smooth' // Smooth scrolling effect
+            });
+        });
+    </script>
+  -->  
 </body>
 
 </html>

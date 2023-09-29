@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Initially hide both divs and set a transition for opacity */
+        .hiddenDiv {
+            opacity: 0;
+            display: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Style for the links */
+        .toggleLink {
+            cursor: pointer;
+            color: blue;
+        }
+
+        /* Add a class to show the div with animation */
+        .show {
+            opacity: 1;
+            display: block;
+        }
+    </style>
+    <script>
+        var currentlyOpenDiv = null;
+
+        function toggleDiv(divId) {
+            var div = document.getElementById(divId);
+            
+            if (currentlyOpenDiv && currentlyOpenDiv !== div) {
+                currentlyOpenDiv.classList.remove("show");
+            }
+
+            if (div.classList.contains("show")) {
+                div.classList.remove("show");
+            } else {
+                div.classList.add("show");
+            }
+
+            currentlyOpenDiv = div.classList.contains("show") ? div : null;
+        }
+    </script>
+</head>
+<body>
+    <a class="toggleLink" onclick="toggleDiv('hiddenDiv1');">Show/Hide 1</a>
+    <div id="hiddenDiv1" class="hiddenDiv">
+        <!-- Content of the first hidden div goes here -->
+        This is the first hidden div.
+    </div>
+
+    <a class="toggleLink" onclick="toggleDiv('hiddenDiv2');">Show/Hide 2</a>
+    <div id="hiddenDiv2" class="hiddenDiv">
+        <!-- Content of the second hidden div goes here -->
+        This is the second hidden div.
+    </div>
+</body>
+</html>

@@ -5,6 +5,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 :root {
     --kuri-soft-white: #F8F6F5;
     --kuri-white: #FFFF;
@@ -84,7 +85,7 @@ footer {
     height: 60px;
   }
   * {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Epilogue', ;
     color: #371B34;
 }
 
@@ -148,7 +149,6 @@ p {
 .btn-green {
     background-color: var(--kuri-green);
     color: var(--kuri-white);
-    width: 100%;
     border: 0;
     padding: 0.8em;
     border-radius: 0.6em;
@@ -156,6 +156,20 @@ p {
     font-size: 14px;
 }
 
+.btn-green-acc {
+    background-color: var(--kuri-green);
+    color: var(--kuri-white);
+    width: 100%;
+    border: 0;
+    padding: 0.8em;
+    border-radius: 0.6em;
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn-s{
+    background-color: transparent;
+    padding: 10px;
+}
 .btn-red {
     background-color: var(--kuri-red);
     color: var(--kuri-white);
@@ -350,7 +364,7 @@ p {
 }
 
 .pass{
-    max-width: 85%;
+    max-width: 80%;
 }
 input{
     background-color: var(--bg-white);
@@ -387,4 +401,14 @@ input[type="file"]{
 
 i.bi {
     font-size: 25px;
+}
+
+.collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.collapse.show {
+    max-height: 1000px; /* Adjust this value according to your content */
 }
