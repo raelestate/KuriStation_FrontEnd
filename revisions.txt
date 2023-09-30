@@ -1,0 +1,19 @@
+These are the following revisions that needs to be revised : Before Monday
+
+Log in - registration - change password *Input group UI* - DONE
+Check Animation
+margins 
+buttons
+Inbox
+icons
+notifications, Add , Account, search , favourites *Pop up feature*
+Logo transparency - Done 
+community *radius*
+Create community -
+Search freelancer / Search people
+Favorites Heart Icon
+Recommendation *roundness*
+Inbox-Message -> UI
+Commission form - 
+Report User - Form is added yet the margin is too big changes will follow
+GPS - Added not yet placed properly

@@ -1,7 +1,17 @@
-@media (width < 600) {
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
     .breadcrumb{
-        font-size: 8px; 
+        font-size: 10px;
     }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* banner displayed only for desktops */
+    #banner { display: block; }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
@@ -35,12 +45,21 @@
     --bg-fade: #B7B7B7;
     --bg-peach: #FEF3E7;
     --bg-background: #FBFBFB;
+
+    --check-size: 50px;
+    --check-border-width: 4px;
+    --check-width: calc(var(--check-size)/2);
+    --check-height: calc(var(--check-size)/2);
+    --check-left: calc(var(--check-size)/2);
+    --check-top: 50%;
+    --check-color: var(--kuri-black);
 }
 
 html {
     position: relative;
     min-height: 100%;
 }
+
 
 .no-header{
     margin-top: 0em;
@@ -72,6 +91,8 @@ body {
     color: var(--kuri-white);
     font-size: 0.8em;
 }
+
+  
 header{
     position: absolute;
     top: 0;
@@ -124,7 +145,11 @@ p {
     color: var(--kuri-brown);
     font-size: 10px;
 }
-
+.btn-brown{
+    border: 2px solid var(--kuri-brown);
+    font-weight: 500;
+    color: var(--kuri-brown);
+}
 .btn-orange {
     background-color: var(--kuri-orange);
     color: var(--kuri-white);
@@ -139,12 +164,6 @@ p {
     font-size: 14px;
 }
 
-.btn-brown {
-    background-color: var(--kuri-brown);
-    color: var(--kuri-white);
-    font-weight: 700;
-    font-size: 14px;
-}
 
 .btn-green {
     background-color: var(--kuri-green);
@@ -389,6 +408,7 @@ input[type="password"]{
 .form-control{
     width: 100%;
 }
+
 input[type="file"]{
     display: none;
 }
@@ -402,7 +422,9 @@ input[type="file"]{
 i.bi {
     font-size: 25px;
 }
-
+form{
+    max-width: 20rem;
+}
 .collapse {
     max-height: 0;
     overflow: hidden;
@@ -411,4 +433,9 @@ i.bi {
 
 .collapse.show {
     max-height: 1000px; /* Adjust this value according to your content */
+}
+
+.gcash{
+    border: 2px solid var(--kuri-blue);
+    padding: 0;
 }

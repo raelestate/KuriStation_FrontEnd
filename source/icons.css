@@ -153,7 +153,18 @@
     background-position: -4.5px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.93929 12.6465L7.69205 11.8974L7.69205 11.8974L7.69204 11.8974C5.33883 11.113 4.16223 10.7208 4.16223 10C4.16223 9.27924 5.33884 8.88704 7.69205 8.10264L16.2052 5.26491C17.861 4.71299 18.6889 4.43702 19.1259 4.87404C19.5629 5.31105 19.287 6.13895 18.735 7.79474L15.8973 16.3079L15.8973 16.3079L15.8973 16.3079C15.1129 18.6611 14.7207 19.8377 14 19.8377C13.2792 19.8377 12.887 18.6611 12.1026 16.3079L11.3535 14.0607L15.7071 9.70711C16.0976 9.31659 16.0976 8.68342 15.7071 8.2929C15.3165 7.90237 14.6834 7.90237 14.2928 8.2929L9.93929 12.6465Z' fill='%23FEF3E7'/%3E%3C/svg%3E");
 }
-
+.click-gps-fill{
+    font-size: 2em;
+    background-size: 1.5em;
+    background-position: -4.5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'%3E%3Cellipse cx='14.506' cy='14' rx='8.26749' ry='8.16667' stroke='%23573926' stroke-width='3'/%3E%3Cellipse cx='14.5062' cy='14' rx='2.36214' ry='2.33333' fill='%2333363F' stroke='%23573926' stroke-width='3'/%3E%3Cpath d='M14.5061 5.83333V3.5' stroke='%23573926' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M22.7736 14L25.1357 14' stroke='%23573926' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M14.5061 24.5L14.5061 22.1666' stroke='%23573926' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M3.87639 14H6.23853' stroke='%23573926' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.click-search-fill{
+    font-size: 2em;
+    background-size: 1.2em;
+    background-position: -4.5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'%3E%3Cellipse cx='13.2387' cy='12.8333' rx='8.26749' ry='8.16667' stroke='%23573926' stroke-width='3'/%3E%3Cpath d='M13.2388 9.33337C12.7735 9.33337 12.3127 9.4239 11.8828 9.5998C11.453 9.77569 11.0624 10.0335 10.7333 10.3585C10.4043 10.6835 10.1433 11.0693 9.96527 11.494C9.7872 11.9186 9.69556 12.3737 9.69556 12.8334' stroke='%23573926' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M23.8684 23.3334L20.3252 19.8334' stroke='%23573926' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+}
 [class*="title-"]{
     display: block;
     background-repeat: no-repeat;

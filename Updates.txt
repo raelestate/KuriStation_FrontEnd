@@ -40,3 +40,8 @@ September 18, 2023
 Footer applied in some HTML docs
 Polished 1%
 Notifications not yet Polished
+
+
+September 30, 2023
+
+Change Password Polished
