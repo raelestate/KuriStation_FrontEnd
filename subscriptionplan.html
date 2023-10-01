@@ -6,43 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link href="./source/styles.css" rel="stylesheet">
 
     <title>Subscription | Account</title>
 </head>
 
 <body>
+    <!-- HEADER FIXED -->
+    <header class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white p-3">
+              <div class="container-fluid d-flex justify-content-between">
+                <a href="login.html">Back</a>
+            </div>
+        </nav>
+    </header>
+    <!-- END OF HEADER FIXED -->
 
     <div class="container align-content-center">
         <div class="text-center position-absolute top-50 start-50 translate-middle pb-5 pt-5">
-            <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0" alt="KuriStation Logo">
+            <img src="source/images/kuristationlogo.png" class="img-thumbnail border-0 transparent" alt="KuriStation Logo">
             <p class="fw-bolder m-0 p-3">Subscription Plan</p>
-            <form class="gap-2 row">
-                <button type="button" class="but pb-2 btn active btn-success" data-bs-toggle="button" aria-pressed="true">1 Month - ₱39</button>
-                <button type="button" class="but pb-2 btn active" data-bs-toggle="button" aria-pressed="true">3 Months - ₱59</button>
-                <button type="button" class="but pb-2 btn active" data-bs-toggle="button" aria-pressed="true">6 Months - ₱79</button>
-                <button type="button" class="but pb-2 btn active" data-bs-toggle="button" aria-pressed="true">1 Year - ₱99</button>
 
-                <button class="but btn active collapse">Subscribe</button>
-            </form>
+            <section class="gap-2 row">
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="populateModalContent('1 Month - ₱39')">1 Month - ₱39</button>
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="populateModalContent('3 Month - 59')">3 Months - ₱59</button>
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="populateModalContent('6 months - ₱79')">6 Months - ₱79</button>
+                <button type="button" class="but pb-2 btn active" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="populateModalContent('1 Year - ₱99')">1 Year - ₱99</button>
+            </section>
 
         </div>
     </div>
 
-    <script>
-        //09-09-2023 4:11pm
-        const button = document.querySelectorAll('.but');
+    <!-- Modal -->
+    <form action="">
+        <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" data-bs-backdrop="static" data-bs-keyboard="false"  aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel">Subscription Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--THIS IS THE PLACE WHERE THE SCRIPT PUT THE TEXT, THE TEXT IS ON THE SCRIPT  AND THE DETAILS IS IN THE BUTTONS populateMOdelContent("TEXT")-->
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-green" data-bs-toggle="modal">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--END OF MODAL-->
 
-        function plan(){
-            for(let i = 0; i < button.length; i++){
-                button[i].addEventListener('click', function(){
-                    let currentBtn = document.querySelectorAll('.btn-success');
-                    currentBtn[0].className = currentBtn[0].className.replace('btn-success', '');
-                    this.className += ' btn-success';
-                })
+    <script>
+            const buttons = document.querySelectorAll('.but');
+
+            function toggleButtonClass(button) {
+                const currentBtns = document.querySelectorAll('.btn-success');
+
+                if (currentBtns.length > 0) {
+                    currentBtns[0].classList.remove('btn-success');
+                }
+
+                button.classList.add('btn-success');
             }
+
+            function plan() {
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener('click', function () {
+                        toggleButtonClass(this);
+                    });
+                }
+            }
+            plan();
+            function populateModalContent(details) {
+            const modalBody = document.querySelector("#detailsModal .modal-body");
+            modalBody.textContent = "You selected: " + details; //This is where will txt will be put
         }
-        plan();
+
+
     </script>
 </body>
 </html>

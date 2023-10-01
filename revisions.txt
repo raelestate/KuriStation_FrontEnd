@@ -6,7 +6,7 @@ margins
 buttons
 Inbox
 icons
-notifications, Add , Account, search , favourites *Pop up feature*
+notifications, Add , Account, search , favourites *Pop up feature* - done
 Logo transparency - Done 
 community *radius*
 Create community -
@@ -17,3 +17,4 @@ Inbox-Message -> UI
 Commission form - 
 Report User - Form is added yet the margin is too big changes will follow
 GPS - Added not yet placed properly
+Subscription Plan - DONE

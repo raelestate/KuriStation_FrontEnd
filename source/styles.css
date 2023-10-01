@@ -174,7 +174,15 @@ p {
     font-weight: 700;
     font-size: 14px;
 }
-
+.btn-green-icon{
+    background-color: var(--kuri-green);
+    color: var(--kuri-green);
+    border: 0;
+    padding: 0.8em;
+    border-radius: 0.6em;
+    font-weight: 700;
+    font-size: 14px;
+}
 .btn-green-acc {
     background-color: var(--kuri-green);
     color: var(--kuri-white);
@@ -187,7 +195,6 @@ p {
 }
 .btn-s{
     background-color: transparent;
-    padding: 10px;
 }
 .btn-red {
     background-color: var(--kuri-red);
@@ -228,6 +235,7 @@ p {
 
 .bg-brown{
     background-color: var(--kuri-brown);
+    color: var(--kuri-bg);
 }
 
 .bg-orange {
@@ -244,7 +252,15 @@ p {
     color: var(--kuri-brown);
 }
 
-
+.post-listing{
+    background-color: var(--bg-pink);
+}
+.post-post{
+    background-color: var(--bg-green);
+}
+.this-brown{
+    color: var(--kuri-brown)
+}
 .slot-orange {
     background-color: var(--kuri-peach);
     color: var(--kuri-brown);

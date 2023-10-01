@@ -8,25 +8,26 @@
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./source/styles.css" rel="stylesheet">
     <link href="./source/icons.css"  rel="stylesheet">
+    <script src="./source/scripts.js"></script>
     <title>Add Post | KuriStation</title>
 </head>
 <body>
     
-    <header class="container">
+    <header class="container shadow-lg">
         <nav class="navbar fixed-top bg-white">
-            <div class="container-fluid d-flex justify-content-between">
+            <div class="container d-flex justify-content-between">
                 <a class="navbar" id="account"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
                         class="img-fluid circular-image-head"></a>
                 <a class="navbar" href="search.html" ><i class="bi head-search" ></i></a>
-                <a class="navbar" id="add"><i class="bi head-add-active"></i></a>
-                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
+                <a class="navbar" id="add"><i class="bi head-add"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-heart"></i></a>
                 <a class="navbar" id="notif"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
     </header>
 
     <!--ACCOUNT SETTINGS-->
-    <section class="collapse" id="collapseSection3">
+    <section class="collapse fade" id="collapseSection3">
         <div class="container bg-pink rounded-3">
             <h6 class="fw-bold p-2 m-2 text-center">Account Settings</b></h6>
         </div>
@@ -117,28 +118,28 @@
         <h1 class="display-5 fw-bold pt-2 m-2">Good Afternoon, <br> <b class="fw-bolder">Rael!</b></h1>
     </div>
     <!-- Posts -->
-    <div class="container p-2">
-        <div class="card rounded-5">
+    <div class="container-fluid p-3">
+        <div class="card rounded-5 post-listing border-0">
             <div class="card-body rounded-5">
                 <div class="row align-items-start">
                     <div class="col d-flex text-start">
                         <img src="./source/images/kuristationlogo.png" class="circular-image-head">
-                        <div class="col">
+                        <div class="col-6">
                             <ul class="list-unstyled">
-                                <li class="ps-1" style="font-size: 17px;">Travis Topper</li>
-                                <li class="ps-1 m-0" style="font-size: 11px; font-weight: 200;">April 1, 2022 at 10:00PM
+                                <li class="ps-2 fw-bolder this-brown"style="font-size: 17px;">Travis Topper</li>
+                                <li class="ps-2 m-0" style="font-size: 13px; font-weight: 400;">April 1, 2022 at 10:00PM
                                 </li>
                             </ul>
                         </div>
                         <div class="col text-end">
-                            <button class="btn btn-green rounded-4"><i class="bi click-heart-fill"></i></button>
-                            <button class="btn btn-green rounded-4"><i class="bi click-send-fill fc-white"></i></button>
+                            <button class="btn m-0 p-0"><i class="bi click-heart-fill"></i></button>
+                            <button class="btn m-0 p-0"><i class="bi click-send-fill"></i></button>
                         </div>
                     </div>
-                    <p class="card-text" style="font-size: 12px;">
+                    <p class="card-text" style="font-size: 15px;">
                         Naa kog kawasan, OMG!!!
                     </p>
-                    <img src="./source/images/drone-shot-of-kawasan-falls.jpg" class="card-img-top rounded-5" alt="...">
+                    <img src="./source/images/drone-shot-of-kawasan-falls.jpg" class="card-img-top" alt="...">
                     <div class="col pt-2 d-flex justify-content-around">
                         <button class="btn btn-s"><i class="bi bi-hand-thumbs-up fc-brown" style="font-size: 20px;"></i>
                             Like</button>
@@ -225,13 +226,13 @@
     </div>
 
     <!--End of Post-->
-    <footer class="container px-3">
-        <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
-            <div class="container-fluid d-flex justify-content-evenly">
+    <footer class="container px-3 shadow-lg">
+        <nav class="navbar fixed-bottom bg-white">
+            <div class="container d-flex justify-content-evenly">
                 <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
                 <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
                 <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
+                <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
