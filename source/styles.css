@@ -60,7 +60,6 @@ html {
     min-height: 100%;
 }
 
-
 .no-header{
     margin-top: 0em;
     margin-bottom: 5em;
@@ -135,10 +134,6 @@ p {
  }
 
  /*buttons*/
-
-.btn{
-    margin: 0 10px 10px 0;
-}
 
 .btn-pink{
     background-color: var(--kuri-pink);
@@ -252,15 +247,33 @@ p {
     color: var(--kuri-brown);
 }
 
-.post-listing{
+/*POST OR LISTING*/
+.post-post{
     background-color: var(--bg-pink);
 }
-.post-post{
+.post-listing{
     background-color: var(--bg-green);
+}
+
+/*READ and UNREAD*/
+.mes-read{
+    background-color: var(--bg-soft-white);
+    color: var(--kuri-brown);
+    border: 1px solid var(--kuri-grey);
+    width: 100%;
+    padding: 0;
+}
+.mes-unread{
+    background-color: var(--kuri-orange);
+    color: var(--kuri-bg);
+    border: 1px solid var(--kuri-grey);
+    width: 100%;
+    padding: 0;
 }
 .this-brown{
     color: var(--kuri-brown)
 }
+
 .slot-orange {
     background-color: var(--kuri-peach);
     color: var(--kuri-brown);
@@ -270,6 +283,8 @@ p {
 .search-message {
     background-color: var(--kuri-grey);
     border-radius: 2em;
+    height: 100%;
+    width : 100%;
 }
 
 .text-bg-orange {
@@ -365,16 +380,35 @@ p {
     margin-bottom: 10px;
 }
 
+.categories{
+    margin: 0px 10px 10px;
+}
 
 .name{
     color: var(--kuri-brown);
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 600;
+    width: 15em;
+}
+.name-unread{
+    color: var(--kuri-bg);
+    font-size: 15px;
+    font-weight: 600;
     width: 15em;
 }
 
 .status{
     color: var(--kuri-brown);
+    font-size: 12px;
+    font-weight: 200;
+    /*Ellipsis for overflowing 1 liner inbox*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.status-unread{
+    color: var(--kuri-bg);
     font-size: 12px;
     font-weight: 200;
     /*Ellipsis for overflowing 1 liner inbox*/
@@ -438,9 +472,7 @@ input[type="file"]{
 i.bi {
     font-size: 25px;
 }
-form{
-    max-width: 20rem;
-}
+
 .collapse {
     max-height: 0;
     overflow: hidden;
@@ -454,4 +486,8 @@ form{
 .gcash{
     border: 2px solid var(--kuri-blue);
     padding: 0;
+}
+
+.search .input-group {
+    width: 90%;
 }

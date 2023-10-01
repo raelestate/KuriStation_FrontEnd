@@ -14,19 +14,106 @@
 <body>
     
     <!-- HEADER FIXED -->
-    <header class="container">
-        <nav class="navbar fixed-top navbar-expand-lg bg-white">
-            <div class="container-fluid d-flex justify-content-between">
-                <a class="navbar" href="Profile - Personal Details.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+    <header class="container shadow-lg">
+        <nav class="navbar fixed-top bg-white">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar" id="account"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
                         class="img-fluid circular-image-head"></a>
-                <a class="navbar" href="search.html"><i class="bi head-search"></i></a>
-                <a class="navbar" href="Add Post.html"><i class="bi head-add-active"></i></a>
-                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
-                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
+                <a class="navbar" href="search.html" ><i class="bi head-search" ></i></a>
+                <a class="navbar" id="add"><i class="bi head-add"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-heart"></i></a>
+                <a class="navbar" id="notif"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
-      </header>
+    </header>
     <!-- END OF HEADER FIXED -->
+    <!--ACCOUNT SETTINGS-->
+    <section class="collapse fade" id="collapseSection3">
+        <div class="container bg-pink rounded-3">
+            <h6 class="fw-bold p-2 m-2 text-center">Account Settings</b></h6>
+        </div>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div class="col text-center">
+                <a href="Profile - Personal Details.html">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-pen" style="font-size: 15px;"></i>&nbsp;Edit Profile</b></h6>
+                </a>
+                <a href="#">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-gear" style="font-size: 15px;"></i>&nbsp;Account Settings</b></h6>
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">     
+                    <h6 class="fw-bold pt-2 pb-1  m-2 text-center btn-soft"><i class="bi bi-box-arrow-in-left" style="font-size: 15px;" ></i>&nbsp;Logout</b></h6>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--END of ACC SETTINGS-->
+
+    <!-- ADD POST -->
+    <section class="collapse" id="collapseSection1">
+        <div class="container bg-pink rounded-3">
+        <h6 class="fw-bold p-2 m-2 text-center">Add Post / Listing</b></h6>
+        </div>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div class="col text-center">
+                <a href="#">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-pen-fill" style="font-size: 15px;"></i>&nbsp;Create Listing</b></h6>
+                </a>
+                <a href="#">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-app-indicator" style="font-size: 15px;"></i>&nbsp;Create Post</b></h6>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End of ADD POST -->
+
+    <!-- Notification -->
+    <section class="collapse" id="collapseSection2">
+        <div class="container bg-pink rounded-3">
+            <h6 class="fw-bold p-2 m-2 text-center">Notifications</b></h6>
+        </div>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div type="button" class="container p-1">
+                <div class="border-0 m-0">
+                    <div class="btn-white">
+                        <div class="row align-items-start ">
+                            <div class="col d-flex text-start align-items-center">
+                                <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                                <ul class="list-unstyled pt-3">
+                                    <li class="ps-2 name">Norman Black</li>
+                                    <li class="ps-2 m-0 status">Messaged you</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div type="button" class="container p-1">
+                <div class="border-0 m-0">
+                    <div class="btn-white">
+                        <div class="row align-items-start ">
+                            <div class="col d-flex text-start align-items-center">
+                                <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                                <ul class="list-unstyled pt-3">
+                                    <li class="ps-2 name">Norman Black</li>
+                                    <li class="ps-2 m-0 status">Liked your post</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Notification -->
+
+    <!--Search-->
+
+    <!--END OF SEARCH-->
+
+    <!-- Favorites -->
+
+    <!--End of Favorites-->
     
         <div class="container">
             <div class="container slot-orange">
@@ -42,17 +129,42 @@
             </div>
         </div>
 
-        <div class="input-group form-control flex-nowrap search-message">
-            <a class="border-0 input-group-text span-btn transparent" id=""><i class="bi click-search-fill"></i></a>
-            <input class="ps-3 p-2 pass rounded-4 transparent" type="text" placeholder="Search Message..." aria-label="Search Message" aria-describedby="addon-wrapping">
-            <a class="transparent input-group-text span-btn" id="toggle"><i id="eye" class="bi click-gps-fill"></i></a>
+    <!-- Search -->
+    <form action="">
+        <div class="search p-1">
+            <div class="input-group form-control search-message p-0 container">
+                <button class="transparent btn ps-4" id="toggle"><i class="bi small-search"></i></button>
+                <input  class="ps-3 p-2 pass rounded-4 transparent" type="text" placeholder="Search here..." >
+            </div>
         </div>
+    </form>
+    <!--Search End-->
 
 
       <!-- MESSAGES-->
       <div type="button" class="container p-1 px-3">
         <div class="border-0 m-0">
-            <div class="btn-white">
+            <div class="btn mes-read">
+                <div class="row align-items-start ">
+                    <div class="col d-flex text-start align-items-center">
+                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                        <ul class="list-unstyled pt-3">
+                            <li class="ps-2 name">Erik Spoelstra</li>
+                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div type="button" class=" container p-1 px-3">
+        <div class="border-0 m-0">
+            <div class="btn mes-read">
                 <div class="row align-items-start ">
                     <div class="col d-flex text-start align-items-center">
                         <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
@@ -72,7 +184,7 @@
 
     <div type="button" class="container p-1 px-3">
         <div class="border-0 m-0">
-            <div class="btn-white">
+            <div class="btn btn-white">
                 <div class="row align-items-start ">
                     <div class="col d-flex text-start align-items-center">
                         <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
@@ -92,7 +204,7 @@
 
     <div type="button" class="container p-1 px-3">
         <div class="border-0 m-0">
-            <div class="btn-white">
+            <div class="btn btn-white">
                 <div class="row align-items-start ">
                     <div class="col d-flex text-start align-items-center">
                         <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
@@ -112,7 +224,7 @@
 
     <div type="button" class="container p-1 px-3">
         <div class="border-0 m-0">
-            <div class="btn-white">
+            <div class="btn btn-white">
                 <div class="row align-items-start ">
                     <div class="col d-flex text-start align-items-center">
                         <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
@@ -132,27 +244,7 @@
 
     <div type="button" class="container p-1 px-3">
         <div class="border-0 m-0">
-            <div class="btn-white">
-                <div class="row align-items-start ">
-                    <div class="col d-flex text-start align-items-center">
-                        <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
-                        <ul class="list-unstyled pt-3">
-                            <li class="ps-2 name">Erik Spoelstra</li>
-                            <li class="ps-2 m-0 status">You: Nevermind I will consider your offer</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <br>
-                        <i class="bi bi-check-circle-fill" style="font-size: 20px;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div type="button" class="container p-1 px-3">
-        <div class="border-0 m-0">
-            <div class="btn-white">
+            <div class="btn btn-white">
                 <div class="row align-items-start ">
                     <div class="col d-flex text-start align-items-center">
                         <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
@@ -174,16 +266,16 @@
     <!--FLOAT-->
     <div class="container-fluid text-end">
         <a href="#" class="btn btn-orange text-end rounded-circle floating-button"><i class="bi bi-pencil fc-white"></i></a>
-</div>
+    </div>
 
     <!-- Footer -->
     <footer class="container px-3">
         <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
             <div class="container-fluid d-flex justify-content-evenly">
-                <a class="navbar-brand" href="#"><i class="bi icon-home"></i></a>
+                <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home"></i></a>
                 <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-chat-active"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
+                <a class="navbar-brand" href="inbox.html"><i class="bi icon-chat-active"></i></a>
+                <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
@@ -196,6 +288,73 @@
             z-index: 1000; /* Ensure it's above other content */
         }
     </style>
+
+<script>
+    const addLink = document.querySelector('#add');
+    const notifLink = document.querySelector('#notif');
+    const accLink = document.querySelector('#account');
+
+    const collapseSection1 = document.querySelector('#collapseSection1');
+    const collapseSection2 = document.querySelector('#collapseSection2');
+    const collapseSection3 = document.querySelector('#collapseSection3');
+
+    function hideSections() {
+        collapseSection1.classList.remove('show');
+        collapseSection2.classList.remove('show');
+        collapseSection3.classList.remove('show');
+    }
+    accLink.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+
+        if (collapseSection3.classList.contains('show')) {
+            collapseSection3.classList.remove('show');
+        } else {
+            hideSections(); // Close other sections
+            collapseSection3.classList.add('show');
+        }
+
+        // Scroll to the clicked section
+        scrollToSection(collapseSection1);
+    });
+
+    addLink.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+
+        if (collapseSection1.classList.contains('show')) {
+            collapseSection1.classList.remove('show');
+        } else {
+            hideSections(); // Close other sections
+            collapseSection1.classList.add('show');
+        }
+
+        // Scroll to the clicked section
+        scrollToSection(collapseSection1);
+    });
+
+    notifLink.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+
+        if (collapseSection2.classList.contains('show')) {
+            collapseSection2.classList.remove('show');
+        } else {
+            hideSections(); // Close other sections
+            collapseSection2.classList.add('show');
+        }
+
+        // Scroll to the clicked section
+        scrollToSection(collapseSection2);
+    });
+
+    // Function to scroll to a section smoothly
+    function scrollToSection(section) {
+        let offset = parseFloat(getComputedStyle(document.body).marginTop);
+        window.scrollTo({
+            top: section.offsetTop - offset,
+            behavior: 'smooth' // Smooth scrolling effect
+        });
+    }
+</script>
+
 </body>
 
 </html>
