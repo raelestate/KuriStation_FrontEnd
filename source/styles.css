@@ -163,7 +163,7 @@ p {
 .btn-green {
     background-color: var(--kuri-green);
     color: var(--kuri-white);
-    border: 0;
+    /*border : 0*/
     padding: 0.8em;
     border-radius: 0.6em;
     font-weight: 700;
@@ -362,6 +362,10 @@ p {
     height: 30px;
     /* Set the desired height */
 }
+.small-icon{
+    width: 70px;
+    height: 70px;
+}
 
 .fav {
     border-radius: 10px;
@@ -434,6 +438,10 @@ p {
 
 .pass{
     max-width: 80%;
+}
+
+.pass-people{
+    max-width:75%;
 }
 input{
     background-color: var(--bg-white);

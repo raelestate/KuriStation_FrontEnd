@@ -20,7 +20,7 @@
                         class="img-fluid circular-image-head"></a>
                 <a class="navbar" href="search.html" ><i class="bi head-search" ></i></a>
                 <a class="navbar" id="add"><i class="bi head-add"></i></a>
-                <a class="navbar" href="favourites.html"><i class="bi head-heart"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-heart-active"></i></a>
                 <a class="navbar" id="notif"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
@@ -113,19 +113,20 @@
     <!-- Favorites -->
 
     <!--End of Favorites-->
-    <div class="container text-center px-3 pt-3">
-        <div class="container text-start slot-orange">
-            <div class="row align-items-center p-3">
-                <div class="col">
-                    <p class="fw-bolder m-0" style="font-size:25px;"><b>Favourites</b></p>
-                    <p style="font-size: 12px;">Check your marked as favourites</p>
-                </div>
-                <div class="col ms-1 text-end">
-                    <i class="bi bi-image fc-orange" style="font-size: 70px;"></i>
+
+        <!-- TITLE -->
+        <div class="container">
+            <div class="container slot-orange">
+                <div class="row align-items-center p-3">
+                    <div class="col-9">
+                        <p class="this-brown m-0" style="font-size:25px; font-weight: 900;">Favorites</p>
+                        <p style="font-size: 12px;">Check your marked as favorites</p>
+                    </div>
+                    <div class="col-3 title-image"></div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- END OF TITLE -->
 
     <div class="container fav pt-2 px-3">
         <div class="card rounded-3">
@@ -210,28 +211,14 @@
     <footer class="container px-3 shadow-lg">
         <nav class="navbar fixed-bottom bg-white">
             <div class="container d-flex justify-content-evenly">
-                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="search-people.html"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="inbox.html"><i class="bi icon-chat"></i></a>
                 <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
 
-    <style>
-        .image-people {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            border: #FE8235 solid 1px;
-        }
-
-        /* Custom CSS for the border */
-
-        .card {
-            background-color: transparent;
-        }
-    </style>
     
     <script>
         const addLink = document.querySelector('#add');

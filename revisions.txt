@@ -18,3 +18,6 @@ Commission form -
 Report User - Form is added yet the margin is too big changes will follow
 GPS - Added not yet placed properly
 Subscription Plan - DONE
+
+OCTOBER 2, 2023
+UPLOAD NOT YET UPDATED - register Identification, create community , create Post, create list
