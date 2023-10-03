@@ -499,3 +499,8 @@ i.bi {
 .search .input-group {
     width: 90%;
 }
+
+.file-upload{
+    padding: 8px 8px 8px 16px;
+    width: 85%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image File Upload</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Select an Image</h2>
+        <form>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="imageInput" accept="image/*">
+                <label class="custom-file-label" for="imageInput">Choose an image file</label>
+            </div>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to update the placeholder text of the file input
+        document.getElementById("imageInput").addEventListener("change", function () {
+            const selectedFile = this.files[0];
+            if (selectedFile) {
+                document.querySelector(".custom-file-label").textContent = selectedFile.name;
+            } else {
+                document.querySelector(".custom-file-label").textContent = "Choose an image file";
+            }
+        });
+    </script>
+</body>
+</html>

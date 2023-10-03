@@ -7,7 +7,7 @@
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./source/styles.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="./source/icons.css">
     <title>Register | Identification</title>
 </head>
 
@@ -30,9 +30,9 @@
 
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item" >Personal Details</li>
-                    <li class="breadcrumb-item active" aria-current="page">Identification</li>
-                    <li class="breadcrumb-item">Account</li>
+                    <a class="breadcrumb-item" href="Register-PersonalDetails.html">Personal Details</a>
+                    <a class="breadcrumb-item active" href="Register-Identification.html" aria-current="page">Identification</a>
+                    <a class="breadcrumb-item">Account</a>
                 </ol>
             </nav>
 
@@ -43,30 +43,59 @@
                 <div class="input-group form-control p-0 mb-2 border-black rounded-3">
                     <input type="number" class="ps-3 p-2 rounded-4" placeholder="ID Number" aria-label="ID Number" aria-describedby="addon-wrapping">
                 </div> 
-                <label class="input-group form-control p-0 mb-2 border-black rounded-3">
-                    ID Front Image
-                    <input type="file" accept="image/jpeg, image/png" class="ps-3 p-2 rounded-4">
-                </label> 
-                <label class="input-group form-control p-0 mb-2 border-black rounded-3">
-                    ID Back Image
-                    <input type="file" accept="image/jpeg, image/png" class="ps-3 p-2 rounded-4">
-                </label> 
-                <label class="input-group form-control p-0 mb-2 border-black rounded-3">
-                    Selfie
-                    <input type="file" accept="image/jpeg, image/png" class="ps-3 p-2 rounded-4">
-                </label> 
+                <div class="custom-file input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="file" class="custom-file-input" id="imageInput1" accept="image/*" data-input="1">
+                    <label class="custom-file-label file-upload text-start" for="imageInput1">ID Front Image</label>
+                    <span class="transparent span-btn" data-span="1"><i class="bi small-file"></i></span>
+                </div>
+                <div class="custom-file input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="file" class="custom-file-input" id="imageInput2" accept="image/*" data-input="2">
+                    <label class="custom-file-label file-upload text-start" for="imageInput2">ID Back Image</label>
+                    <span class="transparent span-btn" data-span="2"><i class="bi small-file"></i></span>
+                </div>
+                <div class="custom-file input-group form-control p-0 mb-2 border-black rounded-3">
+                    <input type="file" class="custom-file-input" id="imageInput3" accept="image/*" data-input="3">
+                    <label class="custom-file-label file-upload text-start" for="imageInput3">Selfie</label>
+                    <span class="transparent span-btn" data-span="3"><i class="bi small-file"></i></span>
+                </div>
                 <div>
                     <button class="btn-green-acc">Next</button>
                 </div>
             </form>
 
+
         </div>
     </section>
-<style>
-    label{
-        cursor: pointer;
-    }
-</style>
+
+
+<script>
+
+    const fileInputs = document.querySelectorAll(".custom-file-input");
+
+    fileInputs.forEach((input, index) => {
+        input.addEventListener("change", function () {
+            const selectedFile = this.files[0];
+            if (selectedFile) {
+                document.querySelectorAll(".custom-file-label")[index].textContent = selectedFile.name;
+            } else {
+                document.querySelectorAll(".custom-file-label")[index].textContent = "Choose an image file";
+            }
+        });
+    });
+
+    const spanElements = document.querySelectorAll(".transparent.span-btn");
+        
+        spanElements.forEach((span) => {
+            span.addEventListener("click", function () {
+                const inputId = this.getAttribute("data-span"); // Get the associated input ID
+                const inputElement = document.querySelector(`#imageInput${inputId}`);
+                
+                // Now, you can work with the associated inputElement, e.g., triggering a click event on it
+                inputElement.click();
+            });
+        });
+</script>
+
 </body>
 
 </html>
