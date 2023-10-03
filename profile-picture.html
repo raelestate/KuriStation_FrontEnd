@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile Photo Selector</title>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 text-center">
+                <div class="profile-container">
+                    <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                    <label for="photo-input" id="photo-label" class="profile-label">
+                        <div class="profile-image">
+                            <img src="" alt="Profile Photo" id="profile-photo" class="profile-photo">
+                        </div>
+                        <span class="profile-text">Tap to select a profile photo</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+.profile-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #e9e9e9;
+    border: 2px dashed #ccc;
+    padding: 10px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+}
+
+.profile-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    </style>
+    <script>
+        document.getElementById('photo-input').addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-photo').src = e.target.result;
+                document.querySelector('.profile-photo').style.display = 'block';
+                document.querySelector('.profile-text').style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
+</body>
+</html>

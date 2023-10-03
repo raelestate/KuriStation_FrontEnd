@@ -504,3 +504,45 @@ i.bi {
     padding: 8px 8px 8px 16px;
     width: 85%;
 }
+
+/*POSTING -- COMMUNITY -- Listing*/
+
+.image-upload-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.image-upload-label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 21px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.image-preview {
+    width: 100%;
+    max-width: 100%; /* Ensure the image preview scales with the container */
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.uploaded-image {
+    max-width: 100%; /* Set a maximum width for the image */
+    max-height: 100%; /* Maintain the original aspect ratio */
+    display: block; /* Display the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.upload-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color as needed */
+}

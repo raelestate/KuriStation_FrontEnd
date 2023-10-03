@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Upload</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="image-upload-container">
+                    <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                    <label for="photo-input" id="photo-label" class="image-upload-label">
+                        <div class="image-preview">
+                            <img src="" id="uploaded-image" class="uploaded-image">
+                        </div>
+                        <span class="upload-text">Click to upload an image</span>
+                    </label>
+                    <textarea id="post-text" class="form-control" rows="3" placeholder="Write your post here..."></textarea>
+                    <button id="post-button" class="btn btn-primary mt-2">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+.image-upload-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.image-upload-label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #e9e9e9;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.image-preview {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+}
+
+.upload-text {
+
+    display: block;
+}
+
+#post-text {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#post-button {
+    margin-top: 10px;
+}
+
+</style>
+<script>
+    document.getElementById('photo-input').addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const uploadedImage = document.getElementById('uploaded-image');
+            uploadedImage.src = e.target.result;
+            uploadedImage.style.display = 'block';
+            document.querySelector('.upload-text').textContent = 'Change Image';
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+document.getElementById('post-button').addEventListener('click', function() {
+    const uploadedImage = document.getElementById('uploaded-image');
+    const postText = document.getElementById('post-text').value;
+
+    // Check if an image is uploaded
+    if (!uploadedImage.src || uploadedImage.src === '') {
+        alert('Please select an image to upload.');
+        return;
+    }
+
+    // You can handle the posting logic here, for example, sending the data to a server.
+    // In this example, we'll just display an alert with the post text and image URL.
+    alert('Post Text: ' + postText + '\nImage URL: ' + uploadedImage.src);
+
+    // Clear the image and text input
+    uploadedImage.src = '';
+    uploadedImage.style.display = 'none';
+    document.querySelector('.upload-text').textContent = 'Click to upload an image';
+    document.getElementById('post-text').value = '';
+});
+
+</script>
+</body>
+</html>
