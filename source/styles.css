@@ -6,11 +6,15 @@
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
+    
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     /* banner displayed only for desktops */
+    body{
+        margin-right: 10rem;
+        margin-left: 10rem;
+    }
     #banner { display: block; }
 }
 
@@ -545,4 +549,103 @@ i.bi {
     transform: translate(-50%, -50%);
     font-size: 16px; /* Adjust the font size as needed */
     color: #333; /* Adjust the text color as needed */
+}
+/*REPORT*/
+.uploaded-image-report {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-upload-container-report {
+    position: relative;
+    max-width: 50%;
+    text-align: center;
+}
+
+.image-preview-report {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-upload-label-report {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 21px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.upload-text-report {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #333;
+    display: block; /* Add this line to ensure it's displayed as a block element */
+    transition: opacity 0.3s; /* Add a transition for smoother appearance/disappearance */
+}
+.image-container {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image fill the container */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container.show-image img {
+    opacity: 1;
+}
+
+.image-container .select-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+
+.image-container.show-image .select-photo {
+    opacity: 0;
+    display: none; /* Hide the label when the image is shown */
+}
+
+.image-container .remove-photo {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    display: none; /* Initially hide the "X" button */
+}
+
+.image-container.show-image .remove-photo {
+    display: block; /* Show the "X" button when the image is displayed */
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
