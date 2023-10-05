@@ -39,53 +39,6 @@
         <textarea style="resize: none;" class="form-control" id="" cols="30" rows="10" placeholder="Write Report..."></textarea>
         </section>
 
-        <!--Photo Handler-->
-        <div class="container mt-3 ms-2 mb-2 row">
-            <div id="imageGallery" class="clearfix">
-                <!-- Four image containers -->
-                <div class="image-container" id="imageContainer1">
-                    <label for="fileInput1" class="select-photo">Select photo</label>
-                    <div class="remove-photo" id="removePhoto1"><i class="small-remove"></i></div>
-                    <input type="file" id="fileInput1" class="file-input" accept="image/*" style="display: none;">
-                    <img src="" alt="Selected Image" id="imagePreview1">
-                </div>
-    
-                <div class="image-container" id="imageContainer2">
-                    <label for="fileInput2" class="select-photo">Select photo</label>
-                    <div class="remove-photo" id="removePhoto2"><i class="small-remove"></i></div>
-                    <input type="file" id="fileInput2" class="file-input" accept="image/*" style="display: none;">
-                    <img src="" alt="Selected Image" id="imagePreview2">
-                </div>
-    
-                <div class="image-container" id="imageContainer3">
-                    <label for="fileInput3" class="select-photo">Select photo</label>
-                    <div class="remove-photo" id="removePhoto3"><i class="small-remove"></i></div>
-                    <input type="file" id="fileInput3" class="file-input" accept="image/*" style="display: none;">
-                    <img src="" alt="Selected Image" id="imagePreview3">
-                </div>
-    
-                <div class="image-container" id="imageContainer4">
-                    <label for="fileInput4" class="select-photo">Select photo</label>
-                    <div class="remove-photo" id="removePhoto4"><i class="small-remove"></i></div>
-                    <input type="file" id="fileInput4" class="file-input" accept="image/*" style="display: none;">
-                    <img src="" alt="Selected Image" id="imagePreview4">
-                </div>
-
-                <div class="image-container" id="imageContainer5">
-                    <label for="fileInput5" class="select-photo">Select photo</label>
-                    <div class="remove-photo" id="removePhoto5"><i class="small-remove"></i></div>
-                    <input type="file" id="fileInput5" class="file-input" accept="image/*" style="display: none;">
-                    <img src="" alt="Selected Image" id="imagePreview5">
-                </div>
-
-                <div class="image-container" id="imageContainer6">
-                    <label for="fileInput6" class="select-photo">Select photo</label>
-                    <div class="remove-photo" id="removePhoto6"><i class="small-remove"></i></div>
-                    <input type="file" id="fileInput6" class="file-input" accept="image/*" style="display: none;">
-                    <img src="" alt="Selected Image" id="imagePreview6">
-                </div>
-            </div>
-        </div>
         
 
         <div class="container">
@@ -106,51 +59,7 @@
     </footer>
     <!--END OF FOOTER-->
 
-    <script>
-        const NUM_INPUTS = 6;
+    <script src="./source/pop.js"></script>
 
-        const fileInputs = Array.from({ length: NUM_INPUTS }, (_, i) =>
-        document.getElementById(`fileInput${i + 1}`)
-        );
-        const imageContainers = Array.from({ length: NUM_INPUTS }, (_, i) =>
-        document.getElementById(`imageContainer${i + 1}`)
-        );
-        const imagePreviews = Array.from({ length: NUM_INPUTS }, (_, i) =>
-        document.getElementById(`imagePreview${i + 1}`)
-        );
-        const removePhotos = Array.from({ length: NUM_INPUTS }, (_, i) =>
-        document.getElementById(`removePhoto${i + 1}`)
-        );
-
-        for (let i = 0; i < NUM_INPUTS; i++) {
-        const fileInput = fileInputs[i];
-        const imageContainer = imageContainers[i];
-        const imagePreview = imagePreviews[i];
-        const removePhoto = removePhotos[i];
-
-        fileInput.addEventListener('change', function () {
-            const selectedFile = this.files[0];
-            if (selectedFile) {
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-                imagePreview.src = e.target.result;
-                imageContainer.classList.add('show-image');
-            };
-
-            reader.readAsDataURL(selectedFile);
-            }
-        });
-
-        removePhoto.addEventListener('click', function () {
-            imagePreview.src = '';
-            imageContainer.classList.remove('show-image');
-        });
-
-        imageContainer.addEventListener('click', function () {
-            fileInput.click();
-        });
-        }
-    </script>
 </body>
 </html>
