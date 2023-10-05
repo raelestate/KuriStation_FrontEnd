@@ -62,6 +62,10 @@ Oct 4, 2023
 9:39 PM - > Join Community Fixed Card
 
 Oct 5, 2023
+10:43 PM -> INBOX MESSAGES with note above 10 secs
+8:43 PM -> Started Cleaning Scripts imported from source files
+
+Oct 6, 2023
 TO DO LIST
--> INBOX MESSAGES and Commission form
--> Profile Personal Details
+----Inbox Message - Commission Form and other frames
+----Profile - Personal Details 
