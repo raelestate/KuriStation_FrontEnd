@@ -245,7 +245,21 @@ p {
     background-color: var(--bg-green);
     color: white;
 }
-
+.bg-grey{
+    background-color: var(--bg-grey);
+}
+.bg-grey .ti {
+    color: #707070;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+}
+.bg-grey p {
+    color: #707070;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
 .note-peach {
     background-color: var(--kuri-peach);
     color: var(--kuri-brown);
@@ -381,7 +395,10 @@ p {
     width: 90px;
     height: 90px;
 }
-
+.square-image-100 {
+    width: 100px;
+    height: 100px;
+}
 .notif-card-white {
     background-color: var(--kuri-white);
     border-radius: 10px;
@@ -640,3 +657,59 @@ i.bi {
         line-height: normal;
         margin: 0;
     }
+
+
+.btn-red-flag{
+    padding: 6px;
+    background-color: var(--bg-red);
+    border-radius: 15px;
+}
+
+.btn-green-send{
+    padding: 6px;
+    background-color: var(--bg-green);
+    border-radius: 15px;
+}
+
+
+/*PRODUCTS*/
+
+.prod-price{
+    padding-top: 3px;
+    color: var(--kuri-green);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.prod-title{
+    color: var(--kuri-brown);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.prod-details{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*DEVICES AND SOFTWARE*/
+
+.device-name{
+    padding-top: 3px;
+    color: var(--kuri-brown);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.device-type{
+    color: var(--kuri-brown);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.device-details{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 300;
+}

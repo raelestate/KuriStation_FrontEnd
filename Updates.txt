@@ -66,6 +66,9 @@ Oct 5, 2023
 8:43 PM -> Started Cleaning Scripts imported from source files
 
 Oct 6, 2023
-TO DO LIST
-----Inbox Message - Commission Form and other frames
-----Profile - Personal Details 
+11:03 PM -> Profile - Products , Personal Details , Ratings(STARS not yet), Devices and Software
+
+Oct 7, 2023
+TODO
+----INBOX commission form and related frames also Time
+
