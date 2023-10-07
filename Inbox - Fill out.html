@@ -4,126 +4,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper-base.min.js"></script>
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Inbox | Fill out </title>
 </head>
 
-<body>
-    <div class="container">
-        <div class="row text-start">
-            <div class="col-1 ms-2 me-2"><img src="./source/images/kuristationlogo.png" alt="" class="top-img"></div>
-            <div class="col">
-                <p class="ps-1 fc-brown" style="font-size: 15px;">Please note that KuriStation is not accountable for
-                    transactions outside the app.</p>
+<body class="message">
+
+    <header>
+        <div class="container fixed-top bg-white pt-3">        
+            <div class="container ms-3 m-0 row justify-content-center align-items-center bg-pink rounded-3 p-1" id="notificationContainer">
+                <div class="col-1 col-md-0 p-0">
+                    <img src="./source/images/kuristationlogo.png" class="small-image text-center" alt="">
+                </div>
+                <div class="col-9 col-md-7">
+                    <p id="notificationText">Please note that KuriStation is not accountable for transactions outside the app.</p>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container pt-3">
-        <div class="row">
-            <div class="col-1">
-                <a href="#">
-                    <i class="bi bi-arrow-left"></i>
-                </a>
-            </div>
-            <div class="col-10">
-                <div class="row align-items-start">
-                    <div class="col d-flex text-start">
-                        <img src="./source/images/kuristationlogo.png" class="circular-image">
+            <div class="container pt-2">
+                <div class="row justify-content-evenly">
+                    <div class="col-1 p-0">
+                        <a href="#">
+                            <i class="bi small-back"></i>
+                        </a>
+                    </div>
+                    <div class="col-2 p-0 text-center">
+                            <img src="./source/images/kuristationlogo.png" class="circular-image">
+                    </div>
+                    <div class="col-5 ps-0 pe-0">
                         <ul class="list-unstyled">
-                            <li class="ps-1 m-0" style="font-size: 13px; color: rgb(0, 0, 0);">Joo Markoo</li>
-                            <li class="ps-1 m-0" style="font-size: 12px; color: rgb(29, 141, 63); font-weight: 200;">
-                                Active Now</li>
+                            <li class="ps-2 fc-brown fw-bolder" style="font-size: 15px;">Joo Markoo</li>
+                            <li class="ps-2" style="font-size: 13px; color: rgb(29, 141, 63); font-weight: 400;">Active Now</li>
                         </ul>
                     </div>
-                    <div class="col text-end">
-                        <i class="bi bi-camera-video">
-                        </i>
-                        <i class="bi bi-gear ps-3">
-                        </i>
+                    <div class="col-2 p-0 text-center mt-2">
+                        <i class="bi small-call"></i>
+                    </div>
+                    <div class="col-2 p-0 text-center mt-2">
+                        <i class="bi small-settings"></i>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="container d-flex flex-row-reverse">
-                    <div class="card text-start h-100 w-auto bg-brown">
-                        <div class="card-body">
-                            <p class="card-text fc-white">Daeeeeee Naa koy Chismiss</p>
-                        </div>
-                    </div>
+        </div>
+    </header>
+    <!--Messages -->
+    <div class="container" id="messageContainer">
+
+        <!-- Personal Message -->
+        <div class="container d-flex flex-row-reverse pt-2">
+            <div class="card text-start h-100 w-auto bg-brown rounded-3 message-container">
+                <div class="card-body ">
+                    <p class="card-text fc-white">Daeeeeee Naa koy Chismiss</p>
                 </div>
-                <div class="container d-flex flex-row pt-2">
-                    <div class="card text-start h-100 w-auto bg-white">
-                        <div class="card-body">
-                            <p class="card-text">HALA GIATAY, SPILL DAYUN</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <!-- Recipient's Message -->
+        <div class="containe d-flex flex-row pt-2">
+            <div class="card text-start h-100 w-auto bg-white message-container">
+                <div class="card-body ">
+                    <p class="card-text">HALA GIATAY, SPILL DAYUN asfasfasfb sdakjfghiaksdjnbfljkasdgbfkjhasdghbfjkldsh</p>
                 </div>
-                <div class="container d-flex flex-row-reverse pt-2">
-                    <div class="card text-start h-100 w-auto bg-brown">
-                        <div class="card-body">
-                            <p class="card-text fc-white">So mao to daeeeeee</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <!-- Recipient's Message -->
+        <div class="containe d-flex flex-row pt-2">
+            <div class="card text-start h-100 w-auto bg-white message-container">
+                <div class="card-body text-center">
+                    <p class="card-title fw-bolder this-brown">Commision Form</p>
+                        <a class="btn btn-dark-grey w-100 row" data-bs-toggle="modal" data-bs-target="#fillOutModal">
+                            <div class="col p-0"><i class="bi small-pen"></i>Fill out</div>
+                        </a>
                 </div>
-                <p class="m-0 ps-2">Commision Form</p>
-                <div class="container d-flex flex-row pt-2">
-                    <div class="card text-start h-100">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-1">
-                                    <a href="#" style="text-decoration: none;">
-                                        <i class="bi bi-pen"></i>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <p>Fill out</p>
-                                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--END OF MESSAGES-->
+
+    <!-- FILL OUT Modal -->
+    <div class="modal fade" id="fillOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+            <!-- Add your buttons here -->
+            <p class="btn btn-reddish w-100 mb-2">Commission Form</p>
+            <form action="" id="fillOutForm" onsubmit="return validateForm()">
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Name" aria-label="Project Name"
+                        aria-describedby="addon-wrapping" id="projName">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Objectives" aria-label="Project Objectives"
+                        aria-describedby="addon-wrapping" id="projObj">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Start Date (dd/mm/yyyy)" aria-label="Project Start Date"
+                    id="projectStartDate" aria-describedby="addon-wrapping" onblur="formatDate(this)">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project End Date (dd/mm/yyyy)"
+                        aria-label="Project End Date" aria-describedby="addon-wrapping" id="projectEndDate" onblur="formatDate(this)">
+                </div>
+                <section class="input-group pb-2" style=" border: #573926; border-width: 100px;">
+                    <textarea style="resize: none;" class="form-control border border-black rounded-3 p-3" id="projDesc" cols="30" rows="7" placeholder="Project Description"></textarea>
+                </section>
+                <div class="input-group pb-2">
+                    <input type="number" class="form-control border border-black rounded-3 p-3" placeholder="Project Amount" aria-label="Project Amount"
+                    aria-describedby="addon-wrapping" id="projAmount">
+                </div>
+                <div id="error-message" class="error-message"></div>
+                <div class="row pt-2">
+                    <div class="col pe-1">
+                        <button class="btn border-black w-100 py-2" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        </div>
+                    <div class="col ps-1">
+                        <button class="btn bg-brown w-100 py-2" id="con">
+                            Submit
+                        </button>
+                    </div>
+                </div>                
+            </form>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Trigger Action Modal -->
+    <div class="modal fade" id="triggerActionModal" tabindex="-1" aria-labelledby="triggerActionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-s border w-100 mb-2" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                                <p class="btn btn-reddish w-100 mb-2">Actions</p>
+                                <a type="button" class="btn btn-brownish w-100 mb-2" id="editCommissionButton" data-bs-dismiss="modal">Edit Commision Details</a>
+                                <a type="button" class="btn btn-brownish w-100 mb-2" href="Inbox - Update Progress Report.html">Update Progress Report</a>
+                                <a type="button" class="btn btn-brownish w-100" href="Inbox - End Project.html">End Project</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-            <div class="container-fluid pt-2">
-                <div class="row">
-                    <div class="col-2">
-                        <a href="#" class="btn btn-brown text-end rounded-circle"><i
-                                class="bi bi-chat fc-white"></i></a>
-                    </div>
-                    <div class="col-10">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Write your message"
-                                aria-label="Username" aria-describedby="basic-addon1">
-                            <span class="input-group-text" id="basic-addon2">
-                                <button class="btn" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal"><i class="bi bi-send"></i></button></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT COMISSION DETAILS MODAL-->
+    <!-- Modal for Editing Commission Details -->
+        <div class="modal fade" id="editCommissionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="btn btn-reddish w-100 mb-2">Commission Form</p>
+                        <div class="input-group pb-2">
+                            <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Name" aria-label="Project Name"
+                                aria-describedby="addon-wrapping" id="editprojName"></div>
+                        <div class="input-group pb-2">
+                            <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Objectives" aria-label="Project Objectives"
+                                aria-describedby="addon-wrapping" id="editprojObj">
                         </div>
+                        <div class="input-group pb-2">
+                            <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Start Date (dd/mm/yyyy)" aria-label="Project Start Date"
+                            id="editprojectStartDate" aria-describedby="addon-wrapping" onblur="formatDate(this)">
+                        </div>                
+                        <div class="input-group pb-2">
+                            <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project End Date (dd/mm/yyyy)"
+                                aria-label="Project End Date" aria-describedby="addon-wrapping" id="editprojectEndDate" onblur="formatDate(this)">
+                        </div>
+                        <section class="input-group pb-2" style=" border: #573926; border-width: 100px;">
+                            <textarea style="resize: none;" class="form-control border border-black rounded-3 p-3" id="editprojDesc" cols="30" rows="7" placeholder="Project Description"></textarea>
+                        </section>
+                        <div class="input-group pb-2">
+                            <input type="number" class="form-control border border-black rounded-3 p-3" placeholder="Project Amount" aria-label="Project Amount"
+                            aria-describedby="addon-wrapping" id="editprojAmount">
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col pe-1">
+                                <button class="btn border-black w-100 py-2" data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
+                                </div>
+                            <div class="col ps-1">
+                                <button class="btn bg-brown w-100 py-2" onclick="saveEditedCommission()" id="save">
+                                    Save
+                                </button>
+                            </div>
+                        </div>     
                     </div>
                 </div>
-
             </div>
+        </div>
+    <!-- END OF COMISSION DETAILS MODAL-->
 
-            <style>
-                /* *{
-                    border: 1px solid red;
-                } */
-                .floating {
-                    position: fixed;
-                    bottom: 100px;
-                    /* Adjust this value to change the vertical position */
-                    /* Adjust this value to change the horizontal position */
-                    z-index: 1000;
-                    /* Ensure it's above other content */
-                }
+    <!-- UPDATE PROGRESS REPORT -->
+    <!-- UPDATE PROGRESS REPORT-->
 
-                .top-img {
-                    width: 50px;
-                }
-                i.bi{
-                    font-size: 18px;
-                }
-            </style>
-</body>
+    <!-- END PROJECT -->
+    <!-- END OF END PROJECT -->
 
+    <!--FOOTER FIXED-->
+    <footer>
+        <div class="container fixed-bottom message bg-white">
+            <div class="row align-items-center">
+                <div class="col-2 comform text-center">
+                    <button href="#" class="btn bg-brown" id="commissionButton"><i class="bi small-form"></i></button>
+                </div>
+                <div class="col-10">
+                    <div class="input-message p-1" >
+                        <div class="input-group form-control search-message p-0 container">
+                            <input id="messageInput"  class="ps-4 pass transparent" type="text" placeholder="Write your message here..." >
+                            <button class="transparent btn" id="sendMessageButton"><i class="bi small-send"></i></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar fixed-bottom bg-white">
+            <div class="container d-flex justify-content-evenly">
+                <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home"></i></a>
+                <a class="navbar-brand" href="search-people.html"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="inbox.html"><i class="bi icon-chat-active"></i></a>
+                <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
+            </div>
+        </nav>
+    </footer>
+    <!--END OF FOOTER-->
+
+    <script src="./source/message.js"></script>
+    <script src="./source/date.js"></script>
+
+    </body>
 </html>

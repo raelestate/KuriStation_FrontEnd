@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper-base.min.js"></script>
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
-    <title>Inbox Message </title>
+    <title>Inbox | Messages </title>
 </head>
 
 <body class="message">
@@ -35,8 +37,8 @@
                     </div>
                     <div class="col-5 ps-0 pe-0">
                         <ul class="list-unstyled">
-                            <li class="ps-2 fc-brown fw-bolder" style="font-size: 13px;">Joo Markoo</li>
-                            <li class="ps-2" style="font-size: 12px; color: rgb(29, 141, 63); font-weight: 200;">Active Now</li>
+                            <li class="ps-2 fc-brown fw-bolder" style="font-size: 15px;">Joo Markoo</li>
+                            <li class="ps-2" style="font-size: 13px; color: rgb(29, 141, 63); font-weight: 400;">Active Now</li>
                         </ul>
                     </div>
                     <div class="col-2 p-0 text-center mt-2">
@@ -48,7 +50,6 @@
                 </div>
             </div>
         </div>
-
     </header>
     <!--Messages -->
     <div class="container" id="messageContainer">
@@ -69,16 +70,88 @@
                 </div>
             </div>
         </div>
-            
+        
     </div>
     <!--END OF MESSAGES-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="fillOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+            <!-- Add your buttons here -->
+            <p class="btn btn-reddish w-100 mb-2">Commission Form</p>
+            <form action="" id="fillOutForm" onsubmit="return validateForm()">
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Name" aria-label="Project Name"
+                        aria-describedby="addon-wrapping" id="projName">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Objectives" aria-label="Project Objectives"
+                        aria-describedby="addon-wrapping" id="projObj">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Start Date (dd/mm/yyyy)" aria-label="Project Start Date"
+                    id="projectStartDate" aria-describedby="addon-wrapping" onblur="formatDate(this)">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project End Date (dd/mm/yyyy)"
+                        aria-label="Project End Date" aria-describedby="addon-wrapping" id="projectEndDate" onblur="formatDate(this)">
+                </div>
+                <section class="input-group pb-2" style=" border: #573926; border-width: 100px;">
+                    <textarea style="resize: none;" class="form-control border border-black rounded-3 p-3" id="projDesc" cols="30" rows="7" placeholder="Project Description"></textarea>
+                </section>
+                <div class="input-group pb-2">
+                    <input type="number" class="form-control border border-black rounded-3 p-3" placeholder="Project Amount" aria-label="Project Amount"
+                    aria-describedby="addon-wrapping" id="projAmount">
+                </div>
+                <div id="error-message" class="error-message"></div>
+                <div class="row pt-2">
+                    <div class="col pe-1">
+                        <button class="btn border-black w-100 py-2" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        </div>
+                    <div class="col ps-1">
+                        <button class="btn bg-brown w-100 py-2" id="con">
+                            Submit
+                        </button>
+                    </div>
+                </div>                
+            </form>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+        <!-- Trigger Action Modal -->
+        <div class="modal fade" id="triggerActionModal" tabindex="-1" aria-labelledby="triggerActionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-s border w-100 mb-2" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                                    <p class="btn btn-reddish w-100 mb-2">Actions</p>
+                                    <a type="button" class="btn btn-brownish w-100 mb-2" href="Inbox - Edit Commission Details.html">Edit Commision Details</a>
+                                    <a type="button" class="btn btn-brownish w-100 mb-2" href="Inbox - Update Progress Report.html">Update Progress Report</a>
+                                    <a type="button" class="btn btn-brownish w-100" href="Inbox - End Project.html">End Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <!--FOOTER FIXED-->
     <footer>
         <div class="container fixed-bottom message bg-white">
             <div class="row align-items-center">
                 <div class="col-2 comform text-center">
-                    <a href="#" class="btn bg-brown"><i class="bi small-form"></i></a>
+                    <button href="#" class="btn bg-brown" id="commissionButton"><i class="bi small-form"></i></button>
                 </div>
                 <div class="col-10">
                     <div class="input-message p-1" >
@@ -91,6 +164,7 @@
                 </div>
             </div>
         </div>
+
         <nav class="navbar fixed-bottom bg-white">
             <div class="container d-flex justify-content-evenly">
                 <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home"></i></a>

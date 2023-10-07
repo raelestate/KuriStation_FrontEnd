@@ -12,91 +12,172 @@
 </head>
 
 <body>
+    
     <!-- HEADER FIXED -->
-    <header class="container">
-        <nav class="navbar fixed-top navbar-expand-lg bg-white">
-            <div class="container-fluid d-flex justify-content-between">
-                <a class="navbar" href="Profile - Personal Details.html"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
+    <header class="container shadow-lg">
+        <nav class="navbar fixed-top bg-white">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar" id="account"> <img src="./source/images/kuristationlogo.png" alt="Circular Image"
                         class="img-fluid circular-image-head"></a>
-                <a class="navbar" href="search.html"><i class="bi head-search"></i></a>
-                <a class="navbar" href="Add Post.html"><i class="bi head-add-active"></i></a>
-                <a class="navbar" href="favourites.html"><i class="bi head-trash"></i></a>
-                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
+                <a class="navbar" href="search.html" ><i class="bi head-search" ></i></a>
+                <a class="navbar" id="add"><i class="bi head-add"></i></a>
+                <a class="navbar" href="favourites.html"><i class="bi head-heart"></i></a>
+                <a class="navbar" id="notif"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
             </div>
         </nav>
-      </header>
+    </header>
     <!-- END OF HEADER FIXED -->
+    <!--ACCOUNT SETTINGS-->
+    <section class="collapse fade" id="collapseSection3">
+        <div class="container bg-pink rounded-3">
+            <h6 class="fw-bold p-2 m-2 text-center">Account Settings</b></h6>
+        </div>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div class="col text-center">
+                <a href="Profile - Personal Details.html">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-pen" style="font-size: 15px;"></i>&nbsp;Edit Profile</b></h6>
+                </a>
+                <a href="#">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-gear" style="font-size: 15px;"></i>&nbsp;Account Settings</b></h6>
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">     
+                    <h6 class="fw-bold pt-2 pb-1  m-2 text-center btn-soft"><i class="bi bi-box-arrow-in-left" style="font-size: 15px;" ></i>&nbsp;Logout</b></h6>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--END of ACC SETTINGS-->
 
-    <div class="container text-center pt-3">
-        <div class="container text-start slot-orange">
-            <div class="row align-items-center p-3">
-                <div class="col text-center">
-                    <p class="fw-bolder m-0" style="font-size:25px;"><b>Commision Form</b></p>
-                </div>
+    <!-- ADD POST -->
+    <section class="collapse" id="collapseSection1">
+        <div class="container bg-pink rounded-3">
+        <h6 class="fw-bold p-2 m-2 text-center">Add Post / Listing</b></h6>
+        </div>
+        <div class="container py-2 my-2 bg-pink rounded-3">
+            <div class="col text-center">
+                <a href="create-listing.html">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-pen-fill" style="font-size: 15px;"></i>&nbsp;Create Listing</b></h6>
+                </a>
+                <a href="create-post.html">
+                    <h6 class="fw-bold pt-2 pb-1 m-2 text-center btn-soft"><i class="bi bi-app-indicator" style="font-size: 15px;"></i>&nbsp;Create Post</b></h6>
+                </a>
             </div>
         </div>
-        <div class="container">
-            <div class="input-group pt-3 pb-2">
-                <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Name" aria-label="Community Name"
-                    aria-describedby="addon-wrapping">
-            </div>
-            <div class="input-group pb-2">
-                <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Community Description" aria-label="Community Description"
-                    aria-describedby="addon-wrapping">
-            </div>
-            <div class="input-group pb-2">
-                <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="+ Add Community Members" aria-label="Community Description"
-                    aria-describedby="addon-wrapping">
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="btn border-black w-100">
-                        Cancel
-                    </button>
+    </section>
+    <!-- End of ADD POST -->
+
+    <!-- Notification -->
+    <section class="collapse" id="collapseSection2">
+        <div class="container bg-pink rounded-3">
+            <h6 class="fw-bold p-2 m-2 text-center">Notifications</b></h6>
+        </div>
+
+        
+        <div class="container py-2 my-2 bg-pink rounded-3">
+
+            <!--Message Notification-->
+            <div type="button" class="container p-1">
+                <div class="border-0 m-0">
+                    <div class="btn-white">
+                        <div class="row align-items-start ">
+                            <div class="col d-flex text-start align-items-center">
+                                <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                                <ul class="list-unstyled pt-3">
+                                    <li class="ps-2 name">Norman Black</li>
+                                    <li class="ps-2 m-0 status">Messaged you</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                <div class="col">
-                    <button class="btn btn-brown w-100">
-                        Submit
-                    </button>
+                </div>
+            </div>
+            
+            <!--Post/List Notification-->
+            <div type="button" class="container p-1">
+                <div class="border-0 m-0">
+                    <div class="btn-white">
+                        <div class="row align-items-start ">
+                            <div class="col d-flex text-start align-items-center">
+                                <img src="./source/images/kuristationlogo.png" class="circular-image ms-2">
+                                <ul class="list-unstyled pt-3">
+                                    <li class="ps-2 name">Norman Black</li>
+                                    <li class="ps-2 m-0 status">Liked your post</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- End of Notification -->
+
+    <div class="container text-center pt-2">
+        <div class="container slot-orange">
+            <div class="row align-items-center p-3">
+                <div class="col">
+                    <p class="fw-bolder m-0" style="font-size:25px;">Commision Form</p>
+                </div>
+            </div>
+        </div>
+        <form action="" onsubmit="return validateForm()">
+            <div class="container">
+                <div class="input-group pt-3 pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Name" aria-label="Project Name"
+                        aria-describedby="addon-wrapping" aria-required="true">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Objectives" aria-label="Project Objectives"
+                        aria-describedby="addon-wrapping" aria-required="true">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Start Date (dd/mm/yyyy)" aria-label="Project Start Date"
+                    id="projectStartDate" aria-describedby="addon-wrapping" onblur="formatDate(this)">
+                </div>
+                <div class="input-group pb-2">
+                    <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project End Date (dd/mm/yyyy)"
+                        aria-label="Project End Date" aria-describedby="addon-wrapping" id="projectEndDate" onblur="formatDate(this)">
+                </div>
+                <section class="input-group pb-2" style=" border: #573926; border-width: 100px;">
+                    <textarea style="resize: none;" class="form-control border border-black rounded-3 p-3" id="" cols="30" rows="7" placeholder="Project Description"></textarea>
+                </section>
+                <div class="input-group pb-2">
+                    <input type="number" class="form-control border border-black rounded-3 p-3" placeholder="Project Amount" aria-label="Project Amount"
+                    aria-describedby="addon-wrapping">
+                </div>
+                <div id="error-message" class="error-message"></div>
+                <div class="row pt-2">
+                    <div class="col pe-1">
+                        <button class="btn border-black w-100 py-2">
+                            Cancel
+                        </button>
+                        </div>
+                    <div class="col ps-1">
+                        <button class="btn bg-brown w-100 py-2">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!--FOOTER FIXED-->
     <footer class="container px-3">
-        <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
-            <div class="container-fluid d-flex justify-content-evenly">
-                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
+        <nav class="navbar fixed-bottom bg-white">
+            <div class="container d-flex justify-content-evenly">
+                <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home"></i></a>
+                <a class="navbar-brand" href="search-people.html"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="inbox.html"><i class="bi icon-chat-active"></i></a>
+                <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>
     <!--END OF FOOTER-->
 
-    <style>
-
-        .image-people {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            border: #FE8235 solid 1px;
-        }
-
-        /* Custom CSS for the border */
-
-        .card {
-            background-color: transparent;
-        }
-    </style>
-    <script>
-        $(function () {
-            // Make the element draggable
-            $("#draggable").draggable();
-        });
-    </script>
+    <!--SCRIPTS-->
+    <script src="./source/pop.js"></script>
+    <script src="./source/date.js"></script>
 </body>
 
 </html>
