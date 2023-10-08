@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageInput = document.getElementById("messageInput");
     const sendMessageButton = document.getElementById("sendMessageButton");
     const messageContainer = document.getElementById("messageContainer");
-    const commissionButton = document.getElementById("commissionButton"); // Add this line\
+    const commissionButton = document.getElementById("commissionButton");
+    const endProjectButton = document.getElementById("endProject");
     const sendComissionButton = document.getElementById("con");
 
     sendComissionButton.addEventListener("click", function () {
@@ -21,9 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Add event listener for the "Commission Text" button
     commissionButton.addEventListener("click", function () {
         sendCommissionText();
+    });
+
+
+    endProjectButton.addEventListener("click", function () {
+        endProjectText();
+        sendRateForm();
     });
 
         // Initialize the modal
@@ -145,10 +151,62 @@ document.addEventListener("DOMContentLoaded", function () {
         // Clear the input field (if needed)
         messageInput.value = "";
     }
+        // Add event listener for the "Yes" button in the "End Project" modal
+
 
     
+        // Function to send the end project text
+        function endProjectText() {
 
+            const endProjectText = "The Project Has Ended! <br> You can now rate each other!";
     
+            // Create a new message element for the end project text
+            const endProjectMessageElement = document.createElement("div");
+            endProjectMessageElement.classList.add("container","pt-2");
+    
+            const endProjectCardElement = document.createElement("div");
+            endProjectCardElement.classList.add("card", "border-0", "w-100","d-flex","transparent");
+    
+            const endProjectCardBodyElement = document.createElement("div");
+            endProjectCardBodyElement.classList.add("card-body", "text-center");
+    
+            const endProjectCardTextElement = document.createElement("p");
+            endProjectCardTextElement.classList.add("card-text", "device-type");
+            endProjectCardTextElement.innerHTML = endProjectText;
+    
+            endProjectCardBodyElement.appendChild(endProjectCardTextElement);
+            endProjectCardElement.appendChild(endProjectCardBodyElement);
+            endProjectMessageElement.appendChild(endProjectCardElement);
+    
+            // Append the new message element to the message container
+            messageContainer.appendChild(endProjectMessageElement);
+        }
+    
+        // Function to send the rate form
+        function sendRateForm() {
+            const rateFormText = "Rate Form"; // Modify this text as needed
+    
+            // Create a new message element for the rate form
+            const rateFormMessageElement = document.createElement("div");
+            rateFormMessageElement.classList.add("container", "d-flex", "flex-row-reverse", "pt-2", "message-entry");
+    
+            const rateFormCardElement = document.createElement("div");
+            rateFormCardElement.classList.add("card", "text-start", "h-100", "w-auto", "bg-brown", "rounded-3", "message-container", "message-display");
+    
+            const rateFormCardBodyElement = document.createElement("div");
+            rateFormCardBodyElement.classList.add("card-body");
+    
+            const rateFormCardTextElement = document.createElement("p");
+            rateFormCardTextElement.classList.add("card-text", "fc-white", "fw-bolder");
+            rateFormCardTextElement.textContent = rateFormText;
+    
+            rateFormCardBodyElement.appendChild(rateFormCardTextElement);
+            rateFormCardElement.appendChild(rateFormCardBodyElement);
+            rateFormMessageElement.appendChild(rateFormCardElement);
+    
+            // Append the new message element to the message container
+            messageContainer.appendChild(rateFormMessageElement);
+        }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -204,54 +262,40 @@ function openTriggerActionModal() {
     triggerActionModal.show();
 }
 
-// Initialize the "Edit Commission Details" modal
-const editCommissionModal = new bootstrap.Modal(document.getElementById('editCommissionModal'));
 
-// Add an event listener to the "Edit Commission Details" button in the "Trigger Action" modal
-document.getElementById("editCommissionButton").addEventListener("click", function () {
-    // Assuming you have a function to populate the edit modal with existing data
-    populateEditCommissionModalWithExistingData();
 
-    // Show the edit modal
-    editCommissionModal.show();
+// FOR THE SLIDER
+
+const slider = document.getElementById('slider');
+const sliderValue = document.getElementById('slider-value');
+const sliderContainer = document.querySelector('.custom-slider');
+
+sliderContainer.style.backgroundColor = '#D7B9A7';
+
+slider.addEventListener('input', () => {
+    const currentValue = slider.value;
+    sliderValue.textContent = currentValue + '%';
+
+    // Calculate the width of the filled part
+    const fillWidth = (currentValue / 99) * 99;
+
+    // Set the custom property to control the background size
+    slider.style.setProperty('--fill-width', `${fillWidth}%`);
 });
 
-// Function to populate the edit modal with existing data for editing
-function populateEditCommissionModalWithExistingData() {
-    // Assuming you have data for the commission form
-    const existingData = {
-        projectName: "",
-        projectObjectives: "",
-        projectStartDate: "",
-        projectEndDate: "",
-        projectDescription: "",
-        projectAmount: ""
-        // Add other existing data fields here
-    };
+///FOR THE RATINGS
 
-    document.getElementById("editprojName").value = existingData.projectName;
-    document.getElementById("editprojObj").value = existingData.projectObjectives;
-    document.getElementById("editprojectStartDate").value = existingData.projectStartDate;
-    document.getElementById("editprojectEndDate").value = existingData.projectEndDate;
-    document.getElementById("editprojDesc").value = existingData.projectDescription;
-    document.getElementById("editprojAmount").value = existingData.projectAmount;
-    // Set other form fields as needed
-}
+const stars = document.querySelectorAll(".star");
 
-function saveEditedCommission() {
-    // Get the values from the edit modal form fields
-    const editedProjectName = document.getElementById("editprojName").value;
-    const editedProjectObjectives = document.getElementById("editprojObj").value;
-    const editedProjectStartDate = document.getElementById("editprojStartDate").value;
-    const editedProjectEndDate = document.getElementById("editprojEndDate").value;
-    const editedProjectDesc = document.getElementById("editprojDesc").value;
-    const editedProjectAmount = document.getElementById("editprojAmount").value;
-    // Get other edited form fields as needed
-
-    // Handle saving the edited commission details here
-    // Update the commission data with the edited values
-
-    // Close the edit modal after saving
-    const editCommissionModal = new bootstrap.Modal(document.getElementById('editCommissionModal'));
-    editCommissionModal.hide();
-}
+stars.forEach((star, index) => {
+    star.addEventListener("click", () => {
+        // Reset all stars
+        stars.forEach((s, i) => {
+            if (i <= index) {
+                s.classList.add("checked");
+            } else {
+                s.classList.remove("checked");
+            }
+        });
+    });
+});

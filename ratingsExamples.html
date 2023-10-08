@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .rating {
+            font-size: 30px;
+        }
+        .star {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .star::before {
+            content: "\2606"; /* Unicode character for an unfilled star */
+            color: gold;
+        }
+        .star.checked::before {
+            content: "\2605"; /* Unicode character for a filled star */
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="rating">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll(".star");
+
+        stars.forEach((star, index) => {
+            star.addEventListener("click", () => {
+                // Reset all stars
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.classList.add("checked");
+                    } else {
+                        s.classList.remove("checked");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

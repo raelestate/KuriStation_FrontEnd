@@ -62,6 +62,14 @@
                 </div>
             </div>
         </div>
+        <!-- Personal Message -->
+        <div class="container pt-2">
+            <div class="card border-0 transparent w-100 d-flex ">
+                <div class="card-body text-center">
+                    <p class="card-text device-type">The Project Has Ended! <br>You can now rate each other!</p>
+                </div>
+            </div>
+        </div>
         <!-- Recipient's Message -->
         <div class="containe d-flex flex-row pt-2">
             <div class="card text-start h-100 w-auto bg-white message-container">
@@ -75,9 +83,21 @@
             <div class="card text-start h-100 w-auto bg-white message-container">
                 <div class="card-body text-center">
                     <p class="card-title fw-bolder this-brown">Commision Form</p>
-                        <a class="btn btn-dark-grey w-100 row" data-bs-toggle="modal" data-bs-target="#fillOutModal">
-                            <div class="col p-0"><i class="bi small-pen"></i>Fill out</div>
-                        </a>
+                    <a class="btn btn-dark-grey w-100 row" data-bs-toggle="modal" data-bs-target="#commissionForm">
+                        <div class="col p-0"><i class="bi small-pen"></i>Fill out</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RATINGSSS -->
+        <div class="containe d-flex flex-row pt-2">
+            <div class="card text-start h-100 w-auto bg-white message-container">
+                <div class="card-body text-center">
+                    <p class="card-title fw-bolder this-brown">Rate Form</p>
+                    <a class="btn btn-dark-grey w-100 row" data-bs-toggle="modal" data-bs-target="#rateForm">
+                        <div class="col p-0"><i class="bi small-pen"></i>Fill out</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -86,7 +106,7 @@
     <!--END OF MESSAGES-->
 
     <!-- FILL OUT Modal -->
-    <div class="modal fade" id="fillOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="commissionForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -136,6 +156,8 @@
         </div>
     </div>
 
+
+
     <!-- Trigger Action Modal -->
     <div class="modal fade" id="triggerActionModal" tabindex="-1" aria-labelledby="triggerActionModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -146,9 +168,9 @@
                             <div class="col-12">
                                 <button type="button" class="btn btn-s border w-100 mb-2" data-bs-dismiss="modal" aria-label="Close">Back</button>
                                 <p class="btn btn-reddish w-100 mb-2">Actions</p>
-                                <a type="button" class="btn btn-brownish w-100 mb-2" id="editCommissionButton" data-bs-dismiss="modal">Edit Commision Details</a>
-                                <a type="button" class="btn btn-brownish w-100 mb-2" href="Inbox - Update Progress Report.html">Update Progress Report</a>
-                                <a type="button" class="btn btn-brownish w-100" href="Inbox - End Project.html">End Project</a>
+                                <a type="button" class="btn btn-brownish w-100 mb-2" data-bs-target="#editCommissionModal"  data-bs-toggle="modal" data-bs-dismiss="modal">Edit Commision Details</a>
+                                <a type="button" class="btn btn-brownish w-100 mb-2" data-bs-target="#updateProgressReport" data-bs-toggle="modal" data-bs-dismiss="modal">Update Progress Report</a>
+                                <a type="button" class="btn btn-brownish w-100"      data-bs-target="#endProjectModal"      data-bs-toggle="modal" data-bs-dismiss="modal">End Project</a>
                             </div>
                         </div>
                     </div>
@@ -157,13 +179,47 @@
         </div>
     </div>
 
+    <!-- RATE FORM -->
+    <div class="modal fade" id="rateForm" tabindex="-1" aria-labelledby="updateProgressReport" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="btn btn-reddish w-100 mb-2">Rate Form</p>
+                    <section class="input-group pb-2" style=" border: #573926; border-width: 100px;">
+                        <textarea style="resize: none;" class="form-control border border-black rounded-3 p-3" id="report" cols="30" rows="7" placeholder="Write your comment here..."></textarea>
+                    </section>
+                    <div class="rating text-center">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col pe-1">
+                            <button class="btn border-black w-100 py-2" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            </div>
+                        <div class="col ps-1">
+                            <button class="btn bg-brown w-100 py-2" id="submitRating" data-bs-dismiss="modal">
+                                Submit Rating
+                            </button>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- UPDATE PROGRESS REPORT-->
+
     <!-- EDIT COMISSION DETAILS MODAL-->
-    <!-- Modal for Editing Commission Details -->
-        <div class="modal fade" id="editCommissionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal fade" id="editCommissionModal" tabindex="-1" aria-labelledby="editCommissionModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <p class="btn btn-reddish w-100 mb-2">Commission Form</p>
+                        <p class="btn btn-reddish w-100 mb-2">Edit Commission Form</p>
                         <div class="input-group pb-2">
                             <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Project Name" aria-label="Project Name"
                                 aria-describedby="addon-wrapping" id="editprojName"></div>
@@ -193,7 +249,7 @@
                                 </button>
                                 </div>
                             <div class="col ps-1">
-                                <button class="btn bg-brown w-100 py-2" onclick="saveEditedCommission()" id="save">
+                                <button class="btn bg-brown w-100 py-2" id="save">
                                     Save
                                 </button>
                             </div>
@@ -205,9 +261,61 @@
     <!-- END OF COMISSION DETAILS MODAL-->
 
     <!-- UPDATE PROGRESS REPORT -->
+    <div class="modal fade" id="updateProgressReport" tabindex="-1" aria-labelledby="updateProgressReport" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="btn btn-reddish w-100 mb-2">Update Progress Report</p>
+                    <section class="input-group pb-2" style=" border: #573926; border-width: 100px;">
+                        <textarea style="resize: none;" class="form-control border border-black rounded-3 p-3" id="report" cols="30" rows="7" placeholder="Write progress..."></textarea>
+                    </section>
+                    <div class="container mt-5 text-center">
+                        <input type="range" class="custom-slider" id="slider" value="0" min="0" max="100">
+                        <p class="mt-3" style="font-size: 20px;"><span id="slider-value">0%</span> Complete</p>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col pe-1">
+                            <button class="btn border-black w-100 py-2" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            </div>
+                        <div class="col ps-1">
+                            <button class="btn bg-brown w-100 py-2" id="save">
+                                Save report
+                            </button>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- UPDATE PROGRESS REPORT-->
 
     <!-- END PROJECT -->
+    <div class="modal fade" id="endProjectModal" tabindex="-1" aria-labelledby="endProjectModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="btn btn-reddish w-100 mb-2">End Project</p>
+                    <div class="text-start this-brown mx-2">
+                        <p>Are you sure you want to end the project? This action cannot be reverted.</p>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col pe-1">
+                            <button class="btn border-black w-100 py-2" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            </div>
+                        <div class="col ps-1">
+                            <button class="btn bg-brown w-100 py-2" id="endProject" data-bs-dismiss="modal">
+                                Yes
+                            </button>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- END OF END PROJECT -->
 
     <!--FOOTER FIXED-->

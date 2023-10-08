@@ -1,48 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Slider</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        .rating {
-            font-size: 30px;
-        }
-        .star {
-            display: inline-block;
-            cursor: pointer;
-        }
-        .star::before {
-            content: "\2606"; /* Unicode character for an unfilled star */
-            color: gold;
-        }
-        .star.checked::before {
-            content: "\2605"; /* Unicode character for a filled star */
-            color: gold;
-        }
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.slider-container {
+    position: relative;
+    width: 300px;
+}
+
+.slider {
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.trail {
+    height: 10px;
+    background-color: #007bff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+}
+
+.value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
-    <div class="rating">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
+    <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" id="slider">
+        <div class="trail" id="trail"></div>
+        <div class="value" id="value">0</div>
     </div>
-
     <script>
-        const stars = document.querySelectorAll(".star");
+const slider = document.getElementById("slider");
+const trail = document.getElementById("trail");
+const valueDisplay = document.getElementById("value");
 
-        stars.forEach((star, index) => {
-            star.addEventListener("click", () => {
-                // Reset all stars
-                stars.forEach((s, i) => {
-                    if (i <= index) {
-                        s.classList.add("checked");
-                    } else {
-                        s.classList.remove("checked");
-                    }
-                });
-            });
-        });
+slider.addEventListener("input", () => {
+    const value = slider.value;
+    const trailWidth = (value / 100) * slider.clientWidth;
+
+    trail.style.width = `${trailWidth}px`;
+    valueDisplay.textContent = value;
+});
     </script>
 </body>
 </html>
