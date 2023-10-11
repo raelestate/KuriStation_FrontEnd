@@ -196,6 +196,18 @@ p {
     font-weight: 700;
     font-size: 14px;
 }
+
+.btn-red-button {
+    background-color: var(--kuri-red);
+    color: var(--kuri-white);
+    width: 100%;
+    border: 0;
+    padding: 0.8em;
+    border-radius: 0.6em;
+    font-weight: 700;
+    font-size: 14px;
+}
+
 .btn-s{
     background-color: transparent;
 }
@@ -606,6 +618,27 @@ i.bi {
     font-size: 16px; /* Adjust the font size as needed */
     color: #333; /* Adjust the text color as needed */
 }
+
+
+.image-upload-container-home {
+    max-width: 600px; /* Set the maximum width you want for the image container */
+    margin: 0 auto; /* Center the image horizontally */
+    text-align: center;
+    position: relative; /* Position the container relatively for absolute positioning */
+    padding-top: 80%; /* 4:3 aspect ratio (4 / 3 * 100%) */
+}
+
+.uploaded-image {
+    position: absolute; /* Position the image absolutely within the container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%; /* Ensure the image covers the entire container */
+    height: 100%; /* Ensure the image covers the entire container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
 /*REPORT*/
 .container-report {
     text-align: center;
@@ -821,5 +854,47 @@ i.bi {
     border-radius: 60px;
     background: #E4E0E0;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+    cursor: pointer;
+}
+
+/*PHOTO*/
+
+.btn-photo{
+    width: 100%;
+    background-color: var(--kuri-green);
+    color: var(--kuri-white);
+    border: 1px solid var(--kuri-brown);
+}
+
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.photo {
+    position: relative;
+    flex: 0 0 calc(33.3333% - 10px);
+    margin: 5px;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Optional background color */
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-photo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
 }

@@ -285,7 +285,7 @@ slider.addEventListener('input', () => {
 
 ///FOR THE RATINGS
 
-const stars = document.querySelectorAll(".star");
+const stars = document.querySelectorAll(".star-this");
 
 stars.forEach((star, index) => {
     star.addEventListener("click", () => {

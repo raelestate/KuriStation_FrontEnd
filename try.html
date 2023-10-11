@@ -3,67 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Slider</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Photo Uploader</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
-        body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-
-.slider-container {
-    position: relative;
-    width: 300px;
-}
-
-.slider {
-    width: 100%;
-    background: transparent;
-    border: none;
-}
-
-.trail {
-    height: 10px;
-    background-color: #007bff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 0;
-}
-
-.value {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-}
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .photo {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            position: relative;
+        }
+        .photo img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .remove-photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="slider-container">
-        <input type="range" min="0" max="100" value="0" class="slider" id="slider">
-        <div class="trail" id="trail"></div>
-        <div class="value" id="value">0</div>
+
+<div class="container mt-4">
+    <h2>Photo Uploader</h2>
+    <p>Click the + button to upload up to 5 photos.</p>
+
+    <div class="photo-container">
+        <!-- Use a label to trigger the file input -->
+        <label for="fileInput" class="add-photo">
+            <i class="fas fa-plus"></i>
+        </label>
+        <!-- Use an input element to select files -->
+        <input type="file" id="fileInput" accept="image/*" style="display: none;" multiple>
     </div>
-    <script>
-const slider = document.getElementById("slider");
-const trail = document.getElementById("trail");
-const valueDisplay = document.getElementById("value");
+    <p id="photoCounter">0/5</p>
+</div>
 
-slider.addEventListener("input", () => {
-    const value = slider.value;
-    const trailWidth = (value / 100) * slider.clientWidth;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const photoContainer = document.querySelector('.photo-container');
+    const photoCounter = document.getElementById('photoCounter');
 
-    trail.style.width = `${trailWidth}px`;
-    valueDisplay.textContent = value;
-});
-    </script>
+    let photoCount = 0;
+
+    fileInput.addEventListener('change', (event) => {
+        const files = event.target.files;
+
+        for (let i = 0; i < files.length; i++) {
+            if (photoCount < 5) {
+                const file = files[i];
+                const imageURL = URL.createObjectURL(file);
+
+                const photoDiv = document.createElement('div');
+                photoDiv.classList.add('photo');
+
+                const img = document.createElement('img');
+                img.src = imageURL;
+
+                const removeBtn = document.createElement('button');
+                removeBtn.innerHTML = '&times;';
+                removeBtn.classList.add('remove-photo');
+                removeBtn.addEventListener('click', () => {
+                    photoDiv.remove();
+                    photoCount--;
+                    updatePhotoCounter();
+                });
+
+                photoDiv.appendChild(img);
+                photoDiv.appendChild(removeBtn);
+                photoContainer.appendChild(photoDiv);
+
+                photoCount++;
+                updatePhotoCounter();
+            } else {
+                alert('You can only upload up to 5 photos.');
+                break;
+            }
+        }
+    });
+
+    function updatePhotoCounter() {
+        photoCounter.textContent = `${photoCount}/5`;
+    }
+</script>
+
 </body>
 </html>
