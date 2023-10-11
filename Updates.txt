@@ -69,6 +69,8 @@ Oct 6, 2023
 11:03 PM -> Profile - Products , Personal Details , Ratings(STARS not yet), Devices and Software
 
 Oct 7, 2023
-TODO
 5:58 pm -> Inbox - Commission Form , Inbox - Fill out , Inbox Commission Send, 
 
+Oct 11, 2023
+TODO
+Evaluate Profile <-- this is for the viewing of profiles from Profile Neri <-- this is for the self Profile account settings

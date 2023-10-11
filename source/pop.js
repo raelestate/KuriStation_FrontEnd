@@ -73,7 +73,7 @@
             const uploadedImage = document.getElementById('uploaded-image');
             uploadedImage.src = e.target.result;
             uploadedImage.style.display = 'block';
-            document.querySelector('.upload-text').textContent = 'Change Image';
+            document.querySelector('.upload-text').textContent = 'Tap to change Image';
         };
         reader.readAsDataURL(file);
         }

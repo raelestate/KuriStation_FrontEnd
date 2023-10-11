@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
+    <link href="./source/styles.css" rel="stylesheet">
+    <title>Add Devices | KuriStation</title>
+</head>
+
+<body>
+
+    <!-- HEADER FIXED -->
+    <header class="container">
+        <nav class="navbar fixed-top bg-white">
+            <div class="container-fluid d-flex justify-content-between">
+                <a href="#">Back</a>
+                <a class="navbar" href="notifications.html"><i class="bi head-bell" style="position: relative;"></i><span class="icon_badge">10</span></a>
+            </div>
+        </nav>
+    </header>
+    <!-- END OF HEADER FIXED -->
+
+    <div class="container">
+        <button class="btn w-100" type="button" style="background-color:#FE8235; color: aliceblue;"><i
+                class="bi bi-camera" style="color: aliceblue; font-size: 20px;"></i>&nbsp;Devices and Softwares</button>
+    </div>
+
+    <form action="">
+        <!-- PHOTO CONTAINER -->
+        <div class="container">
+            <div class="image-upload-container ">
+                <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                <label for="photo-input" id="photo-label" class="image-upload-label">
+                    <div class="image-preview">
+                        <img src="./source/images/transparent.png" alt="Uploaded Image" id="uploaded-image" class="uploaded-image">
+                        <div class="upload-text">Select a photo to upload</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="input-group pb-2">
+                <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Name" aria-label="Name"
+                aria-describedby="addon-wrapping">
+            </div>
+
+            <div class="input-group pb-2">
+                <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Type" aria-label="Type"
+                aria-describedby="addon-wrapping">
+            </div>
+
+
+            <div class="input-group pb-2">
+                <input type="text" class="form-control border border-black rounded-3 p-3" placeholder="Specification Link" aria-label="Specification Link"
+                aria-describedby="addon-wrapping">
+            </div>
+
+            <div class="pt-2">
+                <a href="" class="btn btn-green-80">Add Device / Software</a>
+            </div>
+        </div>
+
+
+    </form>
+    
+    <!--FOOTER FIXED-->
+    <footer class="container px-3">
+        <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
+            <div class="container-fluid d-flex justify-content-evenly">
+                <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home-active"></i></a>
+                <a class="navbar-brand" href="search-people.html"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="inbox.html"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
+            </div>
+        </nav>
+    </footer>
+    <!--END OF FOOTER-->
+
+    <script src="./source/upload.js"></script>
+</body>
+
+</html>

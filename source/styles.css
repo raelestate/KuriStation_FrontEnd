@@ -207,7 +207,16 @@ p {
     font-weight: 700;
     font-size: 14px;
 }
-
+.btn-green-80{
+    background-color: var(--kuri-green);
+    color: var(--kuri-white);
+    width: 100%;
+    border: 0;
+    padding: 0.8em;
+    border-radius: 0.6em;
+    font-weight: 700;
+    font-size: 14px;
+}
 .btn-s{
     background-color: transparent;
 }
@@ -628,7 +637,7 @@ i.bi {
     padding-top: 80%; /* 4:3 aspect ratio (4 / 3 * 100%) */
 }
 
-.uploaded-image {
+.uploaded-image-home {
     position: absolute; /* Position the image absolutely within the container */
     top: 0;
     left: 0;

@@ -1,41 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    
-    const messageInput = document.getElementById("messageInput");
-    const sendMessageButton = document.getElementById("sendMessageButton");
-    const messageContainer = document.getElementById("messageContainer");
-    const commissionButton = document.getElementById("commissionButton");
-    const endProjectButton = document.getElementById("endProject");
+document.addEventListener("DOMContentLoaded", function(){
     const sendComissionButton = document.getElementById("con");
-
+    const messageContainer = document.getElementById("messageContainer");
     sendComissionButton.addEventListener("click", function () {
         submitFormAndSendMessage();
     });
 
-    sendMessageButton.addEventListener("click", function () {
-        sendMessage();
-    });
-    
-    messageInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            sendMessage();
-        }
-    });
-
-    commissionButton.addEventListener("click", function () {
-        sendCommissionText();
-    });
-
-
-    endProjectButton.addEventListener("click", function () {
-        endProjectText();
-        sendRateForm();
-    });
-
-        // Initialize the modal
-        const fillOutModal = new bootstrap.Modal(document.getElementById('fillOutModal'));
-
-        function submitFormAndSendMessage() {
+    function submitFormAndSendMessage() {
             // Get the values from the form fields
             const projectName = document.getElementById("projName").value;
             const projectObjectives = document.getElementById("projObj").value;
@@ -85,12 +55,43 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("projDesc").value = "";
                 document.getElementById("projAmount").value = "";
     
-                fillOutModal.hide();
+                $('#commissionForm').modal('hide');
                 
                 clearError();
             }
         }
-        
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const messageInput = document.getElementById("messageInput");
+    const sendMessageButton = document.getElementById("sendMessageButton");
+    const messageContainer = document.getElementById("messageContainer");
+    const commissionButton = document.getElementById("commissionButton");
+    const endProjectButton = document.getElementById("endProject");
+
+
+    sendMessageButton.addEventListener("click", function () {
+        sendMessage();
+    });
+    
+    messageInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            sendMessage();
+        }
+    });
+
+    commissionButton.addEventListener("click", function () {
+        sendCommissionText();
+    });
+
+
+    endProjectButton.addEventListener("click", function () {
+        endProjectText();
+        sendRateForm();
+    });
+
 
     function sendMessage() {
         const messageText = messageInput.value;

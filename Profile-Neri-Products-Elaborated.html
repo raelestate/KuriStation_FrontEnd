@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./source/icons.css">
     <link href="./source/styles.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -25,19 +26,26 @@
             <button class="btn btn-custom" style="color:aliceblue;" type="button"><i class="bi bi-folder2" style="font-size: 15px; color:aliceblue;"></i>&nbsp;&nbsp;&nbsp;Products</button>
           </div>
     </div>
-    <div class="position-relative m-4 p-2">
-        <div class="card" style="width: 18rem;">
-            <img src="./source/images/kuristationlogo.png" class="card-img-top" alt="...">
+
+    <div class="container pt-3">
+        <div class="card">
             <div class="card-body">
-              <h5 class="card-title fw-bolder" style="color:#53A06E;">P 90</h5>
-              <h6 class="card-title fw-bolder" style="color:#573926;">Prod Title</h6>
-              <small class="card-title fw-bolder" style="color:#707070;">Category: Nature</small>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="d-grid gap-2">
-                <button class="btn btn-success" type="button">Edit Product</button>
-                <button class="btn btn-danger" type="button">Delete Product</button>
-              </div>
+                <div class="image-upload-container">
+                    <img src="./source/images/kuristationlogo.png" alt="Uploaded Image" class="card-img uploaded-image">
+                </div>
+                <ul class="col list-unstyled text-start">
+                    <li class="fc-green-bold">Php 150.00</li>
+                    <li>Prod Title</li>
+                    <li>Nature</li>
+                    <li class="m-0 fc-fade status" style="font-size: 12px; font-weight: 200;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi aperiam eos unde?</li>
+                </ul>
             </div>
+        </div>
+          <div class="pt-2">
+            <a class="btn btn-green-acc">Edit Product</a>
+          </div>
+          <div class="pt-1">
+            <a href="deletelisting.html" class="btn btn-red-button">Delete Product</a>
           </div>
     </div>
 
@@ -45,10 +53,10 @@
     <footer class="container px-3">
         <nav class="navbar fixed-bottom navbar-expand-lg  bg-white">
             <div class="container-fluid d-flex justify-content-evenly">
-                <a class="navbar-brand" href="#"><i class="bi icon-home-active"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-badge"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-chat"></i></a>
-                <a class="navbar-brand" href="#"><i class="bi icon-person"></i></a>
+                <a class="navbar-brand" href="Home-Feed.html"><i class="bi icon-home"></i></a>
+                <a class="navbar-brand" href="search-people.html"><i class="bi icon-badge"></i></a>
+                <a class="navbar-brand" href="inbox.html"><i class="bi icon-chat"></i></a>
+                <a class="navbar-brand" href="community.html"><i class="bi icon-person"></i></a>
             </div>
         </nav>
     </footer>

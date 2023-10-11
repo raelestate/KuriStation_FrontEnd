@@ -21,22 +21,27 @@
   </header>
   <!-- END OF HEADER FIXED -->
 
-  <form class="container" action="">
+  <div class="container pt-4">
     <div class="card">
-        <img src="./source/images/kuristationlogo.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title fw-bolder" style="color:#53A06E;">Card title</h5>
-          <h6 class="card-title fw-bolder" style="color:#573926;">Prod Title</h6>
-          <small class="card-title fw-bolder" style="color:#707070;">Category: Nature</small>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <div class="d-grid gap-2">
-            <h6 class="card-title fw-bolder" style="color:#573926;">Are you sure you want to delete this product?</h6>
-            <button class="btn btn-danger" type="button">Delete Product</button>
-            <button class="btn btn-brown" type="button">Cancel</button>
+            <div class="image-upload-container">
+                <img src="./source/images/kuristationlogo.png" alt="Uploaded Image" class="card-img uploaded-image">
+            </div>
+            <ul class="col list-unstyled text-start card-text">
+              <li class="fc-green-bold">Php 150.00</li>
+              <li>Prod Title</li>
+              <li>Nature</li>
+              <li class=" fc-fade status" style="font-size: 12px; font-weight: 200;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi aperiam eos unde?</li>
+          </ul>
         </div>
-      </div>
-    </div> 
-  </form>
+    </div>
+    <div class="container">
+      <p class="this-brown pt-2 text-center fw-bold">Are you sure you want to delete this listing ?</p>
+      <div class="pt-2"><a class="btn btn-red-button ">Delete Product</a></div>
+      <div class="pt-2"><a class="btn btn-brown w-100">Cancel</a></div>
+    </div>
+
+</div>
 
     <!--FOOTER FIXED-->
     <footer class="container px-3">
