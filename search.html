@@ -131,18 +131,17 @@
 
     <div class="container p-2 ps-3 d-flex align-content-start flex-wrap">
         <div class="col">
-            <button class="btn categories btn-orange ">Nature</button>
-            <button class="btn categories btn-grey">Portrait</button>
-            <button class="btn categories btn-grey">Family</button>
-            <button class="btn categories btn-grey">Landscape</button>
-            <button class="btn categories btn-grey">Trending</button>
-            <button class="btn categories btn-grey">Sceneries</button>
-            <button class="btn categories btn-grey">Waters</button>
-            <button class="btn categories btn-grey">Astrophotography</button>
-            <button class="btn categories btn-grey">Climate</button>
-            <button class="btn categories btn-grey">Animals</button>
+            <button class="btn categories btn-grey" name="category">Nature</button>
+            <button class="btn categories btn-grey" name="category">Portrait</button>
+            <button class="btn categories btn-grey" name="category">Family</button>
+            <button class="btn categories btn-grey" name="category">Landscape</button>
+            <button class="btn categories btn-grey" name="category">Trending</button>
+            <button class="btn categories btn-grey" name="category">Sceneries</button>
+            <button class="btn categories btn-grey" name="category">Waters</button>
+            <button class="btn categories btn-grey" name="category">Astrophotography</button>
+            <button class="btn categories btn-grey" name="category">Climate</button>
+            <button class="btn categories btn-grey" name="category">Animals</button>
         </div>
-        
     </div>
     <!--FOOTER FIXED-->
     <footer class="container px-3 shadow-lg">
@@ -158,7 +157,15 @@
     <!--END OF FOOTER-->
     
     <script src="./source/pop.js"></script>
-
+    <script>
+        // Toggle the active state of the day buttons
+        const categories = document.querySelectorAll('button[name="category"]');
+        categories.forEach(button => {
+            button.addEventListener('click', function() {
+                button.classList.toggle('active');
+            });
+        });
+    </script>
     <style>
         a{
             text-decoration: none;

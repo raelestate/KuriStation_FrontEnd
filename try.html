@@ -1,104 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Uploader</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <style>
-        .photo-container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .photo {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            position: relative;
-        }
-        .photo img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        .remove-photo {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
-
-<div class="container mt-4">
-    <h2>Photo Uploader</h2>
-    <p>Click the + button to upload up to 5 photos.</p>
-
-    <div class="photo-container">
-        <!-- Use a label to trigger the file input -->
-        <label for="fileInput" class="add-photo">
-            <i class="fas fa-plus"></i>
-        </label>
-        <!-- Use an input element to select files -->
-        <input type="file" id="fileInput" accept="image/*" style="display: none;" multiple>
+    <div class="container">
+        <h2>Set Your Availability</h2>
+        <form id="availabilityForm">
+            <div class="form-group">
+                <label for="day">Select Days:</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Monday" autocomplete="off"> Monday
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Tuesday" autocomplete="off"> Tuesday
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Wednesday" autocomplete="off"> Wednesday
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Thursday" autocomplete="off"> Thursday
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Friday" autocomplete="off"> Friday
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Saturday" autocomplete="off"> Saturday
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="checkbox" name="days" value="Sunday" autocomplete="off"> Sunday
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Select Time Slots:</label>
+                <input type="time" class="form-control" name="timeSlot" id="timeSlot">
+                <small class="form-text text-muted">You can add multiple time slots.</small>
+            </div>
+            
+            <button type="button" class="btn btn-primary" onclick="addTimeSlot()">Add Time Slot</button>
+            
+            <div class="form-group">
+                <label for="selectedTimeSlots">Selected Time Slots:</label>
+                <ul id="selectedTimeSlots"></ul>
+            </div>
+            
+            <button type="submit" class="btn btn-success">Save Availability</button>
+        </form>
     </div>
-    <p id="photoCounter">0/5</p>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-<script>
-    const fileInput = document.getElementById('fileInput');
-    const photoContainer = document.querySelector('.photo-container');
-    const photoCounter = document.getElementById('photoCounter');
-
-    let photoCount = 0;
-
-    fileInput.addEventListener('change', (event) => {
-        const files = event.target.files;
-
-        for (let i = 0; i < files.length; i++) {
-            if (photoCount < 5) {
-                const file = files[i];
-                const imageURL = URL.createObjectURL(file);
-
-                const photoDiv = document.createElement('div');
-                photoDiv.classList.add('photo');
-
-                const img = document.createElement('img');
-                img.src = imageURL;
-
-                const removeBtn = document.createElement('button');
-                removeBtn.innerHTML = '&times;';
-                removeBtn.classList.add('remove-photo');
-                removeBtn.addEventListener('click', () => {
-                    photoDiv.remove();
-                    photoCount--;
-                    updatePhotoCounter();
-                });
-
-                photoDiv.appendChild(img);
-                photoDiv.appendChild(removeBtn);
-                photoContainer.appendChild(photoDiv);
-
-                photoCount++;
-                updatePhotoCounter();
-            } else {
-                alert('You can only upload up to 5 photos.');
-                break;
+    
+    <script>
+        function addTimeSlot() {
+            const timeSlotInput = document.getElementById("timeSlot");
+            const timeSlot = timeSlotInput.value;
+            if (timeSlot) {
+                const selectedTimeSlots = document.getElementById("selectedTimeSlots");
+                const listItem = document.createElement("li");
+                listItem.textContent = timeSlot;
+                selectedTimeSlots.appendChild(listItem);
+                timeSlotInput.value = "";
             }
         }
-    });
-
-    function updatePhotoCounter() {
-        photoCounter.textContent = `${photoCount}/5`;
-    }
-</script>
-
+        
+        document.getElementById("availabilityForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const selectedDays = document.querySelectorAll('input[name="days"]:checked');
+            const selectedTimeSlots = document.querySelectorAll('#selectedTimeSlots li');
+            
+            // You can send this data to your backend for processing and storage
+            console.log("Selected Days:", [...selectedDays].map(day => day.value));
+            console.log("Selected Time Slots:", [...selectedTimeSlots].map(slot => slot.textContent));
+        });
+        
+        // Toggle the active state of the day buttons
+        const dayButtons = document.querySelectorAll('input[name="days"]');
+        dayButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                button.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

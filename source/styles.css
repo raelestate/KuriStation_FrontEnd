@@ -118,7 +118,8 @@ footer {
 }
 
 a {
-    color: #371B34;
+    text-decoration: none;
+    color: var(--kuri-brown);
 }
 
 p {
@@ -906,4 +907,12 @@ i.bi {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/*Search categories*/
+
+.btn.categories.btn-grey.active {
+    background-color: var(--kuri-orange);
+    color: var(--kuri-white);
+    border: 2px solid var(--kuri-white);
 }
